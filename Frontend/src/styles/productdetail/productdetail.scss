@@ -1,0 +1,166 @@
+@import "../global/global.scss";
+
+@media only screen and (max-width: 1537px) {
+    .product-detail-container {
+        position: relative;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+
+        .product-detail {
+            width: 100%;
+            margin-top: 88px;
+            display: flex;
+            flex-direction: column;
+
+            .product-detail-main {
+                width: 100%;
+                display: flex;
+                padding: 40px 200px;
+                background: $main-color;
+                column-gap: 120px;
+
+                .loading {
+                    width: 100%;
+                    height: 400px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                img {
+                    width: 30%;
+                    height: 500px;
+                    object-fit: cover;
+                }
+
+                .product-detail-content {
+                    width: 70%;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 15px;
+
+                    small {
+                        color: $fade-white;
+                        font-size: 0.8rem;
+                    }
+
+                    h2 {
+                        font-size: 58px;
+                        font-family: $main-font;
+                        font-weight: 200;
+                        color: $fade-white;
+                    }
+
+                    strong {
+                        margin-top: 40px;
+                        font-size: 38px;
+                        color: white;
+                        font-family: $main-font;
+                    }
+
+                    p {
+                        margin-top: 40px;
+                        color: $fade-white;
+                        font-size: 0.9rem;
+                        line-height: 2;
+                    }
+
+                    div {
+                        margin-top: 20px;
+                        display: flex;
+                        column-gap: 20px;
+
+                        button {
+                            padding: 10px 40px;
+                            font-family: $main-font;
+                            cursor: pointer;
+                            transition: .4s;
+                        }
+
+                        a {
+                            background: white;
+                            color: black;
+                            font-weight: 600;
+                            padding: 10px 40px;
+                            font-family: $main-font;
+                            cursor: pointer;
+                            transition: .4s;
+                            font-size: 0.9rem;
+                        }
+
+                        button:nth-child(2) {
+                            border: 2px solid rgba(255, 255, 255, .2);
+                            color: white;
+                            font-weight: 600;
+                        }
+
+                        button:nth-child(2):hover {
+                            background: rgba(255, 255, 255, .1);
+                        }
+                    }
+                }
+            }
+
+            .product-detail-related {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding: 40px 100px;
+                background: $main-color;
+                row-gap: 40px;
+
+                strong {
+                    font-size: 30px;
+                    font-family: $main-font;
+                    color: white;
+                }
+
+                .product-detail-related-list {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    column-gap: 30px;
+
+                    .product-related-item {
+                        display: flex;
+                        flex-direction: column;
+                        border: $border-test;
+                        height: 400px;
+                        align-items: center !important;
+                        justify-content: center;
+                        border: 1px solid rgba(255, 255, 255, .2);
+                        border-radius: 15px;
+                        row-gap: 30px;
+
+                        img {
+                            width: 150px;
+                            height: 150px;
+                            object-fit: cover;
+                        }
+
+                        strong {
+                            font-family: $main-font;
+                            color: white;
+                            font-size: 1rem;
+                        }
+
+                        p {
+                            line-height: 1 !important;
+                            font-size: 0.9rem !important;
+                            font-weight: 500 !important;
+                            letter-spacing: normal !important;
+                            color: $fade-white !important;
+                        }
+
+                        button {
+                            padding: 7px 30px;
+                            color: black;
+                            background: $second-color;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

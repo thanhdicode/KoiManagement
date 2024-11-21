@@ -1,0 +1,996 @@
+@import "../global/global.scss";
+$fade-white: rgba(255, 255, 255, .7);
+
+.cover {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+
+    .loading {
+        width: 100vw;
+        height: 100vh;
+        z-index: 20;
+        position: fixed;
+        background: rgba(0, 0, 0, .7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .login-container {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+        padding: 80px 150px;
+        display: flex;
+        column-gap: 50px;
+        justify-content: space-between;
+
+        .login-main {
+            width: 550px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: $main-color;
+            border-radius: 15px;
+            padding: 60px 0;
+
+            .login-header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0 40px;
+                row-gap: 15px;
+
+                img {
+                    width: 150px;
+                    height: 150px;
+                    object-fit: cover;
+                    position: static;
+                    z-index: 2;
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 15px;
+
+                    strong {
+                        font-family: $main-font;
+                        color: $second-color;
+                        font-size: 28px;
+                        letter-spacing: 1px;
+                    }
+
+                    p {
+                        color: $second-color;
+                        font-weight: 400;
+                        font-size: 0.85rem;
+                    }
+                }
+            }
+
+            .login-form {
+                margin-top: 20px;
+                padding: 0 40px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+
+                .input-item {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 15px;
+
+                    label {
+                        font-size: 0.8rem;
+                        color: $fade-white;
+                        font-weight: 600;
+                    }
+
+                    div {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid rgba(255, 255, 255, .2);
+                        border-radius: 15px;
+
+                        ::placeholder {
+                            color: rgba(255, 255, 255, .4);
+                        }
+
+                        input {
+                            width: 100%;
+                            padding: 12px 20px;
+                        }
+
+                        span {
+                            position: absolute;
+                            left: 93%;
+                            color: $fade-white;
+                        }
+                    }
+                }
+
+                a {
+                    font-size: 0.7rem;
+                    color: $second-color;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+
+                .fail {
+                    font-size: 0.7rem;
+                    color: rgb(243, 74, 74);
+                }
+
+                input[type="submit"] {
+                    padding: 5px 0;
+                    background: rgba(0, 0, 0, .7);
+                    border-radius: 10px;
+                    cursor: pointer;
+                    font-size: 0.9rem;
+                    font-weight: 700;
+                    color: $second-color;
+                    font-family: $main-font;
+                    transition: .4s;
+                }
+
+                input[type="submit"]:hover {
+                    background: $fade-white;
+                    color: black;
+                }
+            }
+
+            .or {
+                position: relative;
+                margin: 35px 40px;
+                border-bottom: 1px solid rgba(255, 255, 255, .2);
+
+                p {
+                    position: absolute;
+                    padding: 15px;
+                    font-size: 0.8rem;
+                    color: rgba(255, 255, 255, .4);
+                    font-weight: 400;
+                    left: 46%;
+                    top: -23px;
+                    background: $main-color;
+                }
+            }
+
+            .custom-google-button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 0;
+                margin: 0 40px;
+                border-radius: 10px;
+                cursor: pointer;
+                column-gap: 15px;
+                border: 1px solid rgba(255, 255, 255, .2);
+                transition: .4s;
+            }
+
+            .oauth {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 0;
+                margin: 0 40px;
+                border-radius: 10px;
+                cursor: pointer;
+                column-gap: 15px;
+                border: 1px solid rgba(255, 255, 255, .2);
+                transition: .4s;
+
+                i,
+                p {
+                    color: $fade-white;
+                }
+
+                p {
+                    font-family: $main-font;
+                    font-size: 0.9rem;
+                }
+
+                i {
+                    font-size: 20px;
+                }
+            }
+
+            .oauth:hover {
+                background: rgba(255, 255, 255, .1);
+            }
+
+            .signup-link {
+                display: flex;
+                align-items: center;
+                padding: 0 40px;
+                margin-top: 20px;
+                column-gap: 5px;
+
+                p,
+                a {
+                    font-size: 0.75rem;
+                }
+
+                p {
+                    color: $fade-white;
+                }
+
+                a {
+                    color: $second-color;
+                }
+            }
+        }
+
+        .login-right {
+            width: 900px;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            justify-content: center;
+            row-gap: 30px;
+
+            h2 {
+                font-size: 50px;
+                font-family: $main-font;
+                color: white;
+                width: 7em; // Matches the width for the typewriter effect
+                position: relative;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            .type-writer {
+                animation: typewriter 1.5s steps(44, end) 1s 1 normal both,
+            }
+
+            @keyframes typewriter {
+                from {
+                    width: 0;
+                }
+
+                to {
+                    width: 7em; // Matches the text width for a clean effect
+                }
+            }
+
+            p {
+                font-size: 24px;
+                font-family: $main-font;
+                color: white;
+                text-align: end;
+            }
+        }
+    }
+}
+
+// responsive
+@media only screen and (max-width: 1537px) {
+    .signup-container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow-y: hidden;
+        background: $main-color;
+        padding: 20px;
+        display: flex;
+
+        .loading {
+            width: 100vw;
+            height: 100vh;
+            z-index: 20;
+            position: fixed;
+            background: rgba(0, 0, 0, .7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .signup-main {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+            }
+
+            .signup-main-header {
+                padding: 0 100px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 5px;
+                margin-top: 15px;
+
+                strong,
+                p {
+                    color: $second-color;
+                }
+
+                strong {
+                    font-size: 26px;
+                    font-weight: 500;
+                }
+
+                p {
+                    font-size: 0.75rem;
+                }
+            }
+
+            .signup-oauth {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 7px 0;
+                margin: 20px 100px;
+                border-radius: 10px;
+                cursor: pointer;
+                column-gap: 15px;
+                border: 1px solid rgba(255, 255, 255, .2);
+                transition: .4s;
+
+                i,
+                p {
+                    color: $fade-white;
+                }
+
+                p {
+                    font-size: 0.8rem;
+                }
+
+                i {
+                    font-size: 16px;
+                }
+            }
+
+            .or {
+                position: relative;
+                margin: 10px 100px;
+                border-bottom: 1px solid rgba(255, 255, 255, .2);
+
+                p {
+                    position: absolute;
+                    padding: 10px;
+                    font-size: 0.7rem;
+                    color: rgba(255, 255, 255, .4);
+                    font-weight: 400;
+                    left: 46%;
+                    top: -19px;
+                    background: $main-color;
+                }
+            }
+
+            .signup-form {
+                margin-top: 10px;
+                padding: 0 100px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 15px;
+
+                .input-item {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 10px;
+
+                    label {
+                        font-size: 0.7rem;
+                        color: $fade-white;
+                        font-weight: 600;
+                    }
+
+                    div {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid rgba(255, 255, 255, .2);
+                        border-radius: 10px;
+
+                        ::placeholder {
+                            font-size: 0.7rem;
+                            color: rgba(255, 255, 255, .4);
+                        }
+
+                        input {
+                            width: 100%;
+                            padding: 8px 15px;
+                            font-size: 0.7rem;
+                        }
+
+                        span {
+                            position: absolute;
+                            left: 93%;
+                            font-size: 18px;
+                            color: $fade-white;
+                        }
+                    }
+                }
+
+                .fail {
+                    font-size: 0.7rem;
+                    color: rgb(243, 74, 74);
+                }
+
+                input[type="submit"] {
+                    margin-top: 5px;
+                    padding: 10px 0;
+                    font-size: 0.8rem;
+                    background: rgba(0, 0, 0, .7);
+                    border-radius: 10px;
+                    cursor: pointer;
+                    font-weight: 700;
+                    color: $second-color;
+                    font-family: $main-font;
+                    transition: .4s;
+                }
+
+                input[type="submit"]:hover {
+                    background: $fade-white;
+                    color: black;
+                }
+            }
+
+            .login-link {
+                display: flex;
+                align-items: center;
+                padding: 0 100px;
+                margin-top: 20px;
+                column-gap: 5px;
+
+                p,
+                a {
+                    font-size: 0.7rem;
+                }
+
+                p {
+                    color: $fade-white;
+                }
+
+                a {
+                    color: $second-color;
+                }
+            }
+        }
+
+        .signup-intro {
+            width: 50%;
+            height: 100%;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 20px;
+                position: absolute;
+            }
+
+            .intro {
+                position: absolute;
+                border-radius: 20px;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                background: rgba(0, 0, 0, .5);
+                padding: 30px 60px;
+                justify-content: center;
+                row-gap: 20px;
+
+                strong,
+                p {
+                    color: $fade-white;
+                }
+
+                strong {
+                    width: 80%;
+                    font-size: 34px;
+                    font-weight: 500;
+                }
+
+                p {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+.cover {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+
+    .loading {
+        width: 100vw;
+        height: 100vh;
+        z-index: 20;
+        position: fixed;
+        background: rgba(0, 0, 0, .7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .forget-container {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+        padding: 60px 95px;
+        display: flex;
+        column-gap: 50px;
+        justify-content: space-between;
+
+        .forget-main {
+            width: 600px;
+            // height: 310px;
+            display: flex;
+            flex-direction: column;
+            background: $main-color;
+            border-radius: 15px;
+            padding: 40px 15px;
+            row-gap: 10px;
+            align-self: center;
+
+            .forget-header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0 20px;
+                row-gap: 10px;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 10px;
+
+
+                    strong {
+                        font-family: $main-font;
+                        color: $second-color;
+                        font-size: 20px;
+
+                        letter-spacing: 1px;
+                    }
+
+                    p {
+                        color: $second-color;
+                        font-weight: 400;
+                        font-size: 0.75rem;
+
+                    }
+                }
+            }
+
+            .forget-form {
+                margin-top: 40px;
+                display: flex;
+                flex-direction: column;
+                padding: 0 40px;
+                row-gap: 10px;
+
+                ::placeholder {
+                    font-size: 0.7rem;
+                    color: rgba(255, 255, 255, .4);
+                }
+
+                input[type="text"] {
+                    padding-bottom: 7px;
+                    border-bottom: 2px solid rgba(255, 255, 255, .2);
+                    font-size: 0.7rem;
+                }
+
+                .error {
+                    margin-top: 10px;
+                    font-size: 0.7rem;
+                    color: rgb(243, 74, 74);
+                }
+
+                input[type="submit"] {
+                    margin-top: 10px;
+                    padding: 12px 0;
+                    font-size: 0.8rem;
+                    background: rgba(0, 0, 0, .7);
+                    border-radius: 10px;
+                    cursor: pointer;
+                    font-weight: 700;
+                    color: $second-color;
+                    font-family: $main-font;
+                    transition: .4s;
+                }
+
+                input[type="submit"]:hover {
+                    background: $fade-white;
+                    color: black;
+                }
+
+            }
+
+            a {
+                margin-top: 5px;
+                font-size: 0.6rem;
+                color: $second-color;
+                padding: 0 40px;
+            }
+        }
+
+        .forget-right {
+            width: 50%;
+            display: flex;
+            align-items: center;
+
+            p {
+                font-size: 18px;
+                font-weight: 200;
+                color: $fade-white;
+            }
+        }
+    }
+
+    .reset-container {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+        padding: 60px 95px;
+        display: flex;
+        column-gap: 50px;
+        justify-content: space-between;
+
+        .reset-main {
+            width: 600px;
+            // height: 310px;
+            display: flex;
+            flex-direction: column;
+            background: $main-color;
+            border-radius: 15px;
+            padding: 40px 15px;
+            row-gap: 10px;
+            align-self: center;
+
+            .reset-header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0 20px;
+                row-gap: 10px;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 10px;
+
+
+                    strong {
+                        font-family: $main-font;
+                        color: $second-color;
+                        font-size: 20px;
+
+                        letter-spacing: 1px;
+                    }
+
+                    p {
+                        color: $second-color;
+                        font-weight: 400;
+                        font-size: 0.75rem;
+
+                    }
+                }
+            }
+
+            .reset-form {
+                margin-top: 40px;
+                display: flex;
+                flex-direction: column;
+                padding: 0 40px;
+                row-gap: 20px;
+
+                .input-item {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 10px;
+
+                    label {
+                        font-size: 0.7rem;
+                        color: $fade-white;
+                        font-weight: 600;
+                    }
+
+                    div {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid rgba(255, 255, 255, .2);
+                        border-radius: 10px;
+
+                        ::placeholder {
+                            font-size: 0.7rem;
+                            color: rgba(255, 255, 255, .4);
+                        }
+
+                        input {
+                            width: 100%;
+                            padding: 8px 15px;
+                            font-size: 0.7rem;
+                        }
+
+                        span {
+                            position: absolute;
+                            left: 93%;
+                            font-size: 18px;
+                            color: $fade-white;
+                        }
+                    }
+                }
+
+
+
+                input[type="submit"] {
+                    margin-top: 10px;
+                    padding: 12px 0;
+                    font-size: 0.8rem;
+                    background: rgba(0, 0, 0, .7);
+                    border-radius: 10px;
+                    cursor: pointer;
+                    font-weight: 700;
+                    color: $second-color;
+                    font-family: $main-font;
+                    transition: .4s;
+                }
+
+                input[type="submit"]:hover {
+                    background: $fade-white;
+                    color: black;
+                }
+
+            }
+
+            .error {
+                padding: 0 40px;
+                margin-top: 10px;
+                font-size: 0.7rem;
+                color: rgb(243, 74, 74);
+                text-align: center;
+            }
+        }
+
+        .reset-right {
+            width: 50%;
+            display: flex;
+            align-items: center;
+
+            p {
+                font-size: 18px;
+                font-weight: 200;
+                color: $fade-white;
+            }
+        }
+    }
+
+    .login-container {
+        padding: 60px 95px;
+
+        .login-main {
+            padding: 40px 15px;
+            row-gap: 10px;
+
+            .login-header {
+                padding: 0 20px;
+                row-gap: 10px;
+
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+
+                div {
+                    row-gap: 10px;
+
+                    strong {
+                        font-size: 20px;
+                    }
+
+                    p {
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+
+            .login-form {
+                padding: 0 30px;
+
+                .input-item {
+                    row-gap: 10px;
+
+                    label {
+                        font-size: 0.7rem;
+                    }
+
+                    div {
+                        border-radius: 10px;
+
+                        ::placeholder {
+                            font-size: 0.7rem;
+                        }
+
+                        input {
+                            padding: 10px 15px;
+                            font-size: 0.7rem;
+                        }
+
+                        span {
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                a {
+                    font-size: 0.65rem;
+                }
+
+                input[type="submit"] {
+                    padding: 10px 0;
+                    font-size: 0.8rem;
+                }
+            }
+
+            .or {
+                margin: 5px 30px;
+
+                p {
+                    padding: 10px;
+                    left: 47%;
+                    top: -18px;
+                    font-size: 0.7rem;
+                }
+            }
+
+            .oauth {
+                padding: 7px 0;
+                margin: 0 30px;
+
+                p {
+                    font-size: 0.75rem;
+                }
+
+                i {
+                    font-size: 18px;
+                }
+            }
+
+            .signup-link {
+                padding: 0 30px;
+                margin-top: 0;
+
+                p,
+                a {
+                    font-size: 0.65rem;
+                }
+            }
+        }
+
+        .login-right {
+            h2 {
+                font-size: 35px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1537px) {
+    .email-verify-container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $main-color;
+
+        .email-verify {
+            width: 600px;
+            max-height: 700px;
+            background: black;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 15px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+            .email-verify-header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 15px;
+
+                h2 {
+                    color: $fade-white;
+                    font-size: 1.3rem;
+                }
+
+                p {
+                    // padding: 0 20px;
+                    text-align: center;
+                    color: $fade-white;
+                    font-size: 0.8rem;
+                    line-height: 1.5;
+                    font-weight: 300;
+                }
+            }
+
+            form {
+                margin-top: 40px;
+                display: flex;
+                flex-direction: column;
+                // justify-content: center;
+                align-items: center;
+
+                .otp-inputs {
+                    display: flex;
+                    justify-content: center;
+                    gap: 25px;
+                    margin-bottom: 20px;
+
+                    input {
+                        width: 50px;
+                        height: 50px;
+                        font-size: 1.5rem;
+                        text-align: center;
+                        border: 2px solid #ddd;
+                        border-radius: 8px;
+                        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+                    }
+
+                    input:focus {
+                        border-color: $second-color;
+                        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+                        outline: none;
+                    }
+
+                    input:hover {
+                        border-color: $fade-white;
+                    }
+                }
+
+                .error {
+                    font-size: 0.7rem;
+                    color: red !important;
+                }
+
+                button {
+                    margin-top: 20px;
+                    padding: 10px 100px;
+                    background: $second-color;
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}

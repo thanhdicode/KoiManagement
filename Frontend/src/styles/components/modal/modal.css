@@ -1,0 +1,2497 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+select,
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 1537px) {
+  .login-success-modal-cover {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+  }
+  .login-success-modal-cover .modal {
+    width: 400px;
+    max-height: 700px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 50px;
+    align-items: center;
+    row-gap: 10px;
+  }
+  .login-success-modal-cover .modal i {
+    font-size: 100px;
+    color: rgb(25, 202, 25);
+  }
+  .login-success-modal-cover .modal strong {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .login-success-modal-cover .modal p {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .add-account-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+  }
+  .add-account-container .add-account-modal {
+    width: 800px;
+    max-height: 700px;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    overflow-y: auto;
+  }
+  .add-account-container .add-account-modal .add-account-header {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .add-account-container .add-account-modal .add-account-header strong {
+    font-size: 1.3rem;
+  }
+  .add-account-container .add-account-modal .add-account-header i {
+    font-size: 32px;
+    cursor: pointer;
+  }
+  .add-account-container .add-account-modal .add-account-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  .add-account-container .add-account-modal .add-account-form .input-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .add-account-container .add-account-modal .add-account-form .input-item label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .add-account-container .add-account-modal .add-account-form .input-item ::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 0.8rem;
+  }
+  .add-account-container .add-account-modal .add-account-form .input-item ::placeholder {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 0.8rem;
+  }
+  .add-account-container .add-account-modal .add-account-form .input-item input {
+    padding: 12px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .add-account-container .add-account-modal .add-account-form .submit {
+    display: flex;
+    justify-content: end;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .add-account-container .add-account-modal .add-account-form .submit button:nth-child(1) {
+    padding: 10px 40px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .add-account-container .add-account-modal .add-account-form .submit button:nth-child(2) {
+    padding: 10px 50px;
+    background: #4b87e0;
+    font-weight: 600;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+  }
+  .add-pond-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+  }
+  .add-pond-container ::-webkit-scrollbar {
+    width: 0;
+  }
+  .add-pond-container .add-pond-modal {
+    width: 800px;
+    max-height: 700px;
+    height: 700px;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    overflow-y: auto;
+  }
+  .add-pond-container .add-pond-modal .add-pond-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .add-pond-container .add-pond-modal .add-pond-header strong {
+    font-size: 1.3rem;
+  }
+  .add-pond-container .add-pond-modal .add-pond-header i {
+    font-size: 32px;
+    cursor: pointer;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .pond {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .pond .input-image {
+    position: relative;
+    margin-top: 30px;
+    width: 300px;
+    height: 220px;
+    border: 1px dashed rgba(0, 0, 0, 0.3);
+    align-self: center;
+    border-radius: 15px;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .pond .input-image .bx-trash-alt {
+    position: absolute;
+    left: 110%;
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .pond .input-image label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .pond .input-image label img {
+    width: 300px;
+    height: 220px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .pond .input-image label i {
+    font-size: 40px;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .pond .input-image label p {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.9);
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .pond .input-image input {
+    display: none;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .pond .input-two-fields {
+    display: flex;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .pond .input-two-fields .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    row-gap: 5px;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .pond .input-two-fields .input-field label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .pond .input-two-fields .input-field ::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 0.8rem;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .pond .input-two-fields .input-field ::placeholder {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 0.8rem;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .pond .input-two-fields .input-field input {
+    padding: 12px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .water {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .water .header {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .water .header strong {
+    font-size: 1.1rem;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .water .header p {
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .water .input-two-fields {
+    display: flex;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .water .input-two-fields .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    row-gap: 5px;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .water .input-two-fields .input-field label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .water .input-two-fields .input-field input {
+    padding: 12px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .water .input-two-fields ::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 0.8rem;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .water .input-two-fields ::placeholder {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 0.8rem;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .water #temp {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .water #temp label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .water #temp input {
+    padding: 12px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .submit {
+    display: flex;
+    justify-content: end;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .submit button:nth-child(1) {
+    padding: 10px 40px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .add-pond-container .add-pond-modal .add-pond-detail .submit button:nth-child(2) {
+    padding: 10px 50px;
+    background: #4b87e0;
+    font-weight: 600;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+  }
+  .update-pond-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+  }
+  .update-pond-container .update-pond-modal {
+    width: 800px;
+    max-height: 700px;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    overflow-y: auto;
+  }
+  .update-pond-container .update-pond-modal .update-pond-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .update-pond-container .update-pond-modal .update-pond-header strong {
+    font-size: 1.3rem;
+  }
+  .update-pond-container .update-pond-modal .update-pond-header i {
+    font-size: 32px;
+    cursor: pointer;
+  }
+  .update-pond-container .update-pond-modal .update-pond-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+  }
+  .update-pond-container .update-pond-modal .update-pond-form .input-image {
+    position: relative;
+    margin-top: 30px;
+    width: 300px;
+    height: 220px;
+    border: 1px dashed rgba(0, 0, 0, 0.3);
+    align-self: center;
+    border-radius: 15px;
+  }
+  .update-pond-container .update-pond-modal .update-pond-form .input-image .bx-trash-alt {
+    position: absolute;
+    left: 110%;
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+  }
+  .update-pond-container .update-pond-modal .update-pond-form .input-image label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+  }
+  .update-pond-container .update-pond-modal .update-pond-form .input-image label img {
+    width: 300px;
+    height: 220px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px;
+  }
+  .update-pond-container .update-pond-modal .update-pond-form .input-image label i {
+    font-size: 40px;
+  }
+  .update-pond-container .update-pond-modal .update-pond-form .input-image label p {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .update-pond-container .update-pond-modal .update-pond-form .input-image input {
+    display: none;
+  }
+  .update-pond-container .update-pond-modal .update-pond-form .input-two-fields {
+    display: flex;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .update-pond-container .update-pond-modal .update-pond-form .input-two-fields .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  .update-pond-container .update-pond-modal .update-pond-form .input-two-fields .input-field label {
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .update-pond-container .update-pond-modal .update-pond-form .input-two-fields .input-field input {
+    width: 100%;
+    padding: 12px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .update-pond-container .update-pond-modal .update-pond-form .submit {
+    display: flex;
+    justify-content: end;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .update-pond-container .update-pond-modal .update-pond-form .submit button:nth-child(1) {
+    padding: 10px 40px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .update-pond-container .update-pond-modal .update-pond-form .submit button:nth-child(2) {
+    padding: 10px 50px;
+    background: #4b87e0;
+    font-weight: 600;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+  }
+  .update-water-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+  }
+  .update-water-container .update-water-modal {
+    width: 800px;
+    max-height: 700px;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    overflow-y: auto;
+  }
+  .update-water-container .update-water-modal .update-water-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .update-water-container .update-water-modal .update-water-header strong {
+    font-size: 1.3rem;
+  }
+  .update-water-container .update-water-modal .update-water-header i {
+    font-size: 32px;
+    cursor: pointer;
+  }
+  .update-water-container .update-water-modal .update-water-form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+  }
+  .update-water-container .update-water-modal .update-water-form .input-field-water {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .update-water-container .update-water-modal .update-water-form .input-field-water label {
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: black;
+  }
+  .update-water-container .update-water-modal .update-water-form .input-field-water input {
+    width: 100%;
+    padding: 12px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .update-water-container .update-water-modal .update-water-form .input-two-fields {
+    display: flex;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .update-water-container .update-water-modal .update-water-form .input-two-fields .input-field {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .update-water-container .update-water-modal .update-water-form .input-two-fields .input-field label {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .update-water-container .update-water-modal .update-water-form .input-two-fields .input-field input {
+    width: 100%;
+    padding: 12px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .update-water-container .update-water-modal .update-water-form .input-field {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .update-water-container .update-water-modal .update-water-form .input-field label {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: black;
+  }
+  .update-water-container .update-water-modal .update-water-form .input-field input {
+    width: 100%;
+    padding: 12px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .update-water-container .update-water-modal .update-water-form .submit {
+    display: flex;
+    justify-content: end;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .update-water-container .update-water-modal .update-water-form .submit button:nth-child(1) {
+    padding: 10px 40px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .update-water-container .update-water-modal .update-water-form .submit button:nth-child(2) {
+    padding: 10px 50px;
+    background: #4b87e0;
+    font-weight: 600;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+  }
+  .add-koi-log-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 21;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+  }
+  .add-koi-log-container ::-webkit-scrollbar {
+    width: 0;
+  }
+  .add-koi-log-container .add-koi-log-modal {
+    width: 800px;
+    max-height: 700px;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    overflow-y: auto;
+  }
+  .add-koi-log-container .add-koi-log-modal .add-koi-log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .add-koi-log-container .add-koi-log-modal .add-koi-log-header strong {
+    font-size: 1.3rem;
+  }
+  .add-koi-log-container .add-koi-log-modal .add-koi-log-header i {
+    font-size: 32px;
+    cursor: pointer;
+  }
+  .add-koi-log-container .add-koi-log-modal .add-koi-log-form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+    position: relative;
+  }
+  .add-koi-log-container .add-koi-log-modal .add-koi-log-form .input-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .add-koi-log-container .add-koi-log-modal .add-koi-log-form .input-item label {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .add-koi-log-container .add-koi-log-modal .add-koi-log-form .input-item ::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.8rem;
+  }
+  .add-koi-log-container .add-koi-log-modal .add-koi-log-form .input-item ::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.8rem;
+  }
+  .add-koi-log-container .add-koi-log-modal .add-koi-log-form .input-item input {
+    padding: 12px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .add-koi-log-container .add-koi-log-modal .add-koi-log-form .custom-datepicker {
+    color: black;
+    padding: 10px 25px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .add-koi-log-container .add-koi-log-modal .add-koi-log-form .custom-calendar {
+    background-color: white;
+    /* Background color of the datepicker */
+    border: 1px solid #ddd;
+    /* Border */
+    border-radius: 5px;
+    /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Shadow effect */
+    z-index: 1000;
+  }
+  .add-koi-log-container .add-koi-log-modal .add-koi-log-form .custom-calendar react-datepicker__header {
+    background-color: #007bff;
+    /* Header background color */
+    color: white;
+    /* Header text color */
+    border-bottom: none;
+    /* Remove bottom border */
+  }
+  .add-koi-log-container .add-koi-log-modal .add-koi-log-form .custom-calendar .react-datepicker__current-month {
+    font-weight: bold;
+    /* Bold month name */
+    font-size: 1.2rem;
+    /* Increase font size */
+  }
+  .add-koi-log-container .add-koi-log-modal .add-koi-log-form .custom-calendar .react-datepicker__day {
+    line-height: 2;
+    /* Increase line height for spacing */
+  }
+  .add-koi-log-container .add-koi-log-modal .add-koi-log-form .custom-calendar .react-datepicker__day:hover {
+    background-color: #007bff;
+    /* Change background on hover */
+    color: white;
+    /* Change text color on hover */
+  }
+  .add-koi-log-container .add-koi-log-modal .add-koi-log-form .custom-calendar .react-datepicker__day--selected {
+    background-color: #007bff;
+    /* Selected day background */
+    color: white;
+    /* Selected day text color */
+  }
+  .add-koi-log-container .add-koi-log-modal .add-koi-log-form .custom-calendar .react-datepicker__day--outside-month {
+    color: #ccc;
+    /* Color for days outside the current month */
+  }
+  .add-koi-log-container .add-koi-log-modal .add-koi-log-form .submit {
+    display: flex;
+    justify-content: end;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .add-koi-log-container .add-koi-log-modal .add-koi-log-form .submit button:nth-child(1) {
+    padding: 10px 40px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .add-koi-log-container .add-koi-log-modal .add-koi-log-form .submit button:nth-child(2) {
+    padding: 10px 50px;
+    background: #4b87e0;
+    font-weight: 600;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+  }
+  .add-koi-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+  }
+  .add-koi-container ::-webkit-scrollbar {
+    width: 0;
+  }
+  .add-koi-container .add-koi-modal {
+    width: 800px;
+    max-height: 700px;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    overflow-y: auto;
+  }
+  .add-koi-container .add-koi-modal .add-koi-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .add-koi-container .add-koi-modal .add-koi-header strong {
+    font-size: 1.3rem;
+  }
+  .add-koi-container .add-koi-modal .add-koi-header i {
+    font-size: 32px;
+    cursor: pointer;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+    position: relative;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-item label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-item input {
+    padding: 12px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-item input ::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.8rem;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-item input ::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.8rem;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-item .custom-datepicker {
+    color: black;
+    padding: 10px 25px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-item .custom-calendar {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-item .custom-calendar .react-datepicker__header {
+    background-color: #007bff;
+    color: white;
+    border-bottom: none;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-item .custom-calendar .react-datepicker__current-month {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-item .custom-calendar .react-datepicker__day {
+    line-height: 2;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-item .custom-calendar .react-datepicker__day:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-item .custom-calendar .react-datepicker__day--selected {
+    background-color: #007bff;
+    color: white;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-item .custom-calendar .react-datepicker__day--outside-month {
+    color: #ccc;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-image {
+    position: relative;
+    margin-top: 30px;
+    width: 300px;
+    height: 220px;
+    border: 1px dashed rgba(0, 0, 0, 0.3);
+    align-self: center;
+    border-radius: 15px;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-image .bx-trash-alt {
+    position: absolute;
+    left: 110%;
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-image label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-image label img {
+    width: 300px;
+    height: 220px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-image label i {
+    font-size: 40px;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-image label p {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.9);
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-image input {
+    display: none;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-two-fields {
+    display: flex;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-two-fields .input-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .input-two-fields input {
+    width: 100%;
+    padding: 12px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .select-two-fields {
+    display: flex;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .select-two-fields .select {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    border: none;
+    border-radius: 10px;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .select-two-fields .select label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .select-two-fields .select select {
+    width: 100%;
+    padding: 12px 25px;
+    color: black;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .select-two-fields .select i {
+    left: 90%;
+    font-size: 20px;
+    position: absolute;
+    z-index: 18;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .menu-flags {
+    border-radius: 10px;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .menu-flags button {
+    font-size: 13px !important;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form #koiname {
+    padding: 12px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .submit {
+    display: flex;
+    justify-content: end;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .submit button:nth-child(1) {
+    padding: 10px 40px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .add-koi-container .add-koi-modal .add-koi-form .submit button:nth-child(2) {
+    padding: 10px 50px;
+    background: #4b87e0;
+    font-weight: 600;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+  }
+  .update-koi-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 21;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+  }
+  .update-koi-container ::-webkit-scrollbar {
+    width: 0;
+  }
+  .update-koi-container .update-koi-modal {
+    width: 800px;
+    max-height: 700px;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    overflow-y: auto;
+  }
+  .update-koi-container .update-koi-modal .update-koi-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .update-koi-container .update-koi-modal .update-koi-header strong {
+    font-size: 1.3rem;
+  }
+  .update-koi-container .update-koi-modal .update-koi-header i {
+    font-size: 32px;
+    cursor: pointer;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .input-image {
+    position: relative;
+    margin-top: 30px;
+    width: 300px;
+    height: 220px;
+    border: 1px dashed rgba(0, 0, 0, 0.3);
+    align-self: center;
+    border-radius: 15px;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .input-image .bx-trash-alt {
+    position: absolute;
+    left: 110%;
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .input-image label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .input-image label img {
+    width: 300px;
+    height: 220px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .input-image label i {
+    font-size: 40px;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .input-image label p {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.9);
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .input-image input {
+    display: none;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .input-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .input-item label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .input-item input {
+    padding: 12px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .input-item input ::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.8rem;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .input-item input ::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.8rem;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .select-two-fields {
+    display: flex;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .select-two-fields .select {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .select-two-fields .select label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .select-two-fields .select select {
+    width: 100%;
+    padding: 12px 25px;
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .select-two-fields .select i {
+    left: 90%;
+    font-size: 20px;
+    position: absolute;
+    z-index: 18;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .menu-flags {
+    border-radius: 10px;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .menu-flags button {
+    font-size: 13px !important;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .submit {
+    display: flex;
+    justify-content: end;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .submit button:nth-child(1) {
+    padding: 10px 40px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .update-koi-container .update-koi-modal .update-koi-form .submit button:nth-child(2) {
+    padding: 10px 50px;
+    background: #4b87e0;
+    font-weight: 600;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+  }
+  .koi-detail-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+    display: flex;
+    justify-content: end;
+  }
+  .koi-detail-container .koi-detail-modal {
+    width: 500px;
+    height: 100%;
+    max-height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    overflow-y: auto;
+  }
+  .koi-detail-container .koi-detail-modal .error-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .koi-detail-container .koi-detail-modal .error-page p {
+    font-size: 1.1rem;
+    color: black;
+  }
+  .koi-detail-container .koi-detail-modal .loading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-header strong {
+    font-size: 1.2rem;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-header i {
+    font-size: 28px;
+    cursor: pointer;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-info img {
+    margin: 30px 0;
+    width: 300px;
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    align-self: center;
+    border-radius: 15px;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-info .koi-detail-info-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-info .koi-detail-info-header div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-info .koi-detail-info-header div strong {
+    font-size: 1.05rem;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-info .koi-detail-info-header div p {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 0.8rem;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-info .koi-detail-info-header span {
+    text-decoration: underline;
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-info .koi-detail-main {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-info .koi-detail-main .koi-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-info .koi-detail-main .koi-info strong {
+    font-size: 0.85rem;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-info .koi-detail-main .koi-info p {
+    font-size: 0.8rem;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-info .koi-detail-main .koi-info p {
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-recommendation {
+    margin-top: 25px;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-recommendation .koi-recommendation-header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-recommendation .koi-recommendation-header strong {
+    font-size: 1.05rem;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-recommendation .koi-recommendation-header p {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 0.8rem;
+    width: 80%;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-recommendation .recommendation-product {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-recommendation .recommendation-product div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-recommendation .recommendation-product div strong {
+    font-size: 1.05rem;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-recommendation .recommendation-product div p {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 0.8rem;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-recommendation .recommendation-product span {
+    text-decoration: underline;
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-recommendation .recommendation {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-recommendation .recommendation .koi-food {
+    display: flex;
+    justify-content: space-between;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-recommendation .recommendation .koi-food strong {
+    font-size: 1rem;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-recommendation .recommendation .koi-food p {
+    font-size: 0.8rem;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-recommendation .recommendation .koi-food p {
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-recommendation .recommendation span {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-recommendation .utils {
+    margin: 20px 0;
+    display: flex;
+    justify-content: end;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-recommendation .utils button {
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-recommendation .utils button:nth-child(1) {
+    padding: 10px 30px;
+    background: #4b87e0;
+    color: white;
+    cursor: pointer;
+  }
+  .koi-detail-container .koi-detail-modal .koi-detail-recommendation .utils button:nth-child(2) {
+    padding: 10px 40px;
+    background: red;
+    color: white;
+    cursor: pointer;
+  }
+  .koi-detail-container .koi-history-modal {
+    width: 500px;
+    height: 100%;
+    max-height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px 50px 30px;
+    overflow-y: auto;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .koi-detail-container .koi-history-modal .error-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .koi-detail-container .koi-history-modal .error-page p {
+    font-size: 1.1rem;
+    color: black;
+  }
+  .koi-detail-container .koi-history-modal .loading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .koi-detail-container .koi-history-modal .empty-log {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .koi-detail-container .koi-history-modal .empty-log strong {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .koi-detail-container .koi-history-modal .empty-log p {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  .koi-detail-container .koi-history-modal .empty-log button {
+    margin-top: 10px;
+    color: white;
+    padding: 8px 40px;
+    font-size: 0.8rem;
+    background: black;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    font-weight: 600;
+    transition: 0.4s;
+  }
+  .koi-detail-container .koi-history-modal .empty-log button:hover {
+    border-color: black;
+    background: white;
+    color: black;
+  }
+  .koi-detail-container .koi-history-modal .koi-history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .koi-detail-container .koi-history-modal .koi-history-header strong {
+    font-size: 1.2rem;
+  }
+  .koi-detail-container .koi-history-modal .koi-history-header i {
+    font-size: 28px;
+    cursor: pointer;
+  }
+  .koi-detail-container .koi-history-modal .koi-history-chart {
+    margin: 30px 0 10px 0;
+  }
+  .koi-detail-container .koi-history-modal .koi-history-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .koi-detail-container .koi-history-modal .koi-history-main .header {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .koi-detail-container .koi-history-modal .koi-history-main .header div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .koi-detail-container .koi-history-modal .koi-history-main .header div strong {
+    font-size: 1.05rem;
+  }
+  .koi-detail-container .koi-history-modal .koi-history-main .header div p {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 0.8rem;
+  }
+  .koi-detail-container .koi-history-modal .koi-history-main .header span {
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .koi-detail-container .koi-history-modal .koi-history-main .history {
+    margin-top: 20px;
+    padding-bottom: 30px;
+  }
+  .koi-detail-container .koi-history-modal .koi-history-main .history thead tr {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 7px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .koi-detail-container .koi-history-modal .koi-history-main .history thead tr th {
+    font-size: 0.75rem;
+  }
+  .koi-detail-container .koi-history-modal .koi-history-main .history thead tr th:nth-child(1) {
+    text-align: start;
+  }
+  .koi-detail-container .koi-history-modal .koi-history-main .history thead tr th:nth-child(2) {
+    text-align: start;
+  }
+  .koi-detail-container .koi-history-modal .koi-history-main .history thead tr th:nth-child(3) {
+    text-align: start;
+  }
+  .koi-detail-container .koi-history-modal .koi-history-main .history thead tr th:nth-child(4) {
+    text-align: start;
+  }
+  .koi-detail-container .koi-history-modal .koi-history-main .history tbody tr {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .koi-detail-container .koi-history-modal .koi-history-main .history tbody tr td {
+    font-size: 0.75rem;
+  }
+  .del-pond-containter {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+  }
+  .del-pond-containter ::-webkit-scrollbar {
+    width: 0;
+  }
+  .del-pond-containter .del-pond-modal {
+    width: 500px;
+    max-height: 700px;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    overflow-y: auto;
+  }
+  .del-pond-containter .del-pond-modal .del-pond-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .del-pond-containter .del-pond-modal .del-pond-header strong {
+    font-size: 1.3rem;
+  }
+  .del-pond-containter .del-pond-modal .del-pond-header i {
+    font-size: 32px;
+    cursor: pointer;
+  }
+  .del-pond-containter .del-pond-modal .del-pond-main {
+    margin: 30px 0;
+  }
+  .del-pond-containter .del-pond-modal .del-pond-main p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  .del-pond-containter .del-pond-modal .submit {
+    display: flex;
+    justify-content: end;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .del-pond-containter .del-pond-modal .submit button:nth-child(1) {
+    width: 100%;
+    padding: 10px 50px;
+    background: red;
+    font-weight: 600;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+  }
+  .del-account-containter {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+  }
+  .del-account-containter ::-webkit-scrollbar {
+    width: 0;
+  }
+  .del-account-containter .del-account-modal {
+    width: 500px;
+    max-height: 700px;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    overflow-y: auto;
+  }
+  .del-account-containter .del-account-modal .del-account-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .del-account-containter .del-account-modal .del-account-header strong {
+    font-size: 1.3rem;
+  }
+  .del-account-containter .del-account-modal .del-account-header i {
+    font-size: 32px;
+    cursor: pointer;
+  }
+  .del-account-containter .del-account-modal .del-account-main {
+    margin: 30px 0;
+  }
+  .del-account-containter .del-account-modal .del-account-main p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  .del-account-containter .del-account-modal .submit {
+    display: flex;
+    justify-content: end;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .del-account-containter .del-account-modal .submit button:nth-child(1) {
+    width: 100%;
+    padding: 10px 50px;
+    background: red;
+    font-weight: 600;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+  }
+  .del-product-containter {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+  }
+  .del-product-containter ::-webkit-scrollbar {
+    width: 0;
+  }
+  .del-product-containter .del-product-modal {
+    width: 500px;
+    max-height: 700px;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    overflow-y: auto;
+  }
+  .del-product-containter .del-product-modal .del-product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .del-product-containter .del-product-modal .del-product-header strong {
+    font-size: 1.3rem;
+  }
+  .del-product-containter .del-product-modal .del-product-header i {
+    font-size: 32px;
+    cursor: pointer;
+  }
+  .del-product-containter .del-product-modal .del-product-main {
+    margin: 30px 0;
+  }
+  .del-product-containter .del-product-modal .del-product-main p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  .del-product-containter .del-product-modal .submit {
+    display: flex;
+    justify-content: end;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .del-product-containter .del-product-modal .submit button:nth-child(1) {
+    width: 100%;
+    padding: 10px 50px;
+    background: red;
+    font-weight: 600;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+  }
+  .del-koi-containter {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 21;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+  }
+  .del-koi-containter ::-webkit-scrollbar {
+    width: 0;
+  }
+  .del-koi-containter .del-koi-modal {
+    width: 500px;
+    max-height: 700px;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    overflow-y: auto;
+  }
+  .del-koi-containter .del-koi-modal .del-koi-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .del-koi-containter .del-koi-modal .del-koi-header strong {
+    font-size: 1.3rem;
+  }
+  .del-koi-containter .del-koi-modal .del-koi-header i {
+    font-size: 32px;
+    cursor: pointer;
+  }
+  .del-koi-containter .del-koi-modal .del-koi-main {
+    margin: 30px 0;
+  }
+  .del-koi-containter .del-koi-modal .del-koi-main p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  .del-koi-containter .del-koi-modal .submit {
+    display: flex;
+    justify-content: end;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .del-koi-containter .del-koi-modal .submit button:nth-child(1) {
+    width: 100%;
+    padding: 10px 50px;
+    background: red;
+    font-weight: 600;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+  }
+  .cancel-order-containter {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+  }
+  .cancel-order-containter ::-webkit-scrollbar {
+    width: 0;
+  }
+  .cancel-order-containter .cancel-order-modal {
+    width: 500px;
+    max-height: 700px;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    overflow-y: auto;
+  }
+  .cancel-order-containter .cancel-order-modal .cancel-order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cancel-order-containter .cancel-order-modal .cancel-order-header strong {
+    font-size: 1.3rem;
+  }
+  .cancel-order-containter .cancel-order-modal .cancel-order-header i {
+    font-size: 32px;
+    cursor: pointer;
+  }
+  .cancel-order-containter .cancel-order-modal .cancel-order-main {
+    margin: 30px 0;
+  }
+  .cancel-order-containter .cancel-order-modal .cancel-order-main p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  .cancel-order-containter .cancel-order-modal .submit {
+    display: flex;
+    justify-content: end;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .cancel-order-containter .cancel-order-modal .submit button:nth-child(1) {
+    width: 100%;
+    padding: 10px 50px;
+    background: red;
+    font-weight: 600;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+  }
+  .del-blog-containter {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+  }
+  .del-blog-containter ::-webkit-scrollbar {
+    width: 0;
+  }
+  .del-blog-containter .del-blog-modal {
+    width: 500px;
+    max-height: 700px;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    overflow-y: auto;
+  }
+  .del-blog-containter .del-blog-modal .del-blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .del-blog-containter .del-blog-modal .del-blog-header strong {
+    font-size: 1.3rem;
+  }
+  .del-blog-containter .del-blog-modal .del-blog-header i {
+    font-size: 32px;
+    cursor: pointer;
+  }
+  .del-blog-containter .del-blog-modal .del-blog-main {
+    margin: 30px 0;
+  }
+  .del-blog-containter .del-blog-modal .del-blog-main p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  .del-blog-containter .del-blog-modal .submit {
+    display: flex;
+    justify-content: end;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .del-blog-containter .del-blog-modal .submit button:nth-child(1) {
+    width: 100%;
+    padding: 10px 50px;
+    background: red;
+    font-weight: 600;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+  }
+  .add-blog-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+  }
+  .add-blog-container ::-webkit-scrollbar {
+    width: 0;
+  }
+  .add-blog-container .add-blog-modal {
+    width: 800px;
+    max-height: 700px;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    overflow-y: auto;
+  }
+  .add-blog-container .add-blog-modal .add-blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .add-blog-container .add-blog-modal .add-blog-header strong {
+    font-size: 1.3rem;
+  }
+  .add-blog-container .add-blog-modal .add-blog-header i {
+    font-size: 32px;
+    cursor: pointer;
+  }
+  .add-blog-container .add-blog-modal .add-blog-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+  }
+  .add-blog-container .add-blog-modal .add-blog-form input {
+    padding: 12px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .add-blog-container .add-blog-modal .add-blog-form .ck-editor__editable {
+    min-height: 300px;
+    /* Adjust the minimum height as needed */
+    max-height: 600px;
+    /* You can also set a maximum height if needed */
+    overflow-y: auto;
+    /* Enable scrolling if content exceeds max height */
+    padding: 10px;
+    /* Add some padding for a more comfortable text entry */
+    border: 1px solid #ddd;
+    /* Optional: Adds a border for visual clarity */
+    border-radius: 4px;
+    /* Rounded corners for a smoother look */
+    outline: none;
+  }
+  .add-blog-container .add-blog-modal .add-blog-form .input-image {
+    position: relative;
+    margin-top: 30px;
+    width: 300px;
+    height: 220px;
+    border: 1px dashed rgba(0, 0, 0, 0.3);
+    align-self: center;
+    border-radius: 15px;
+  }
+  .add-blog-container .add-blog-modal .add-blog-form .input-image .bx-trash-alt {
+    position: absolute;
+    left: 110%;
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+  }
+  .add-blog-container .add-blog-modal .add-blog-form .input-image label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+  }
+  .add-blog-container .add-blog-modal .add-blog-form .input-image label img {
+    width: 300px;
+    height: 220px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px;
+  }
+  .add-blog-container .add-blog-modal .add-blog-form .input-image label i {
+    font-size: 40px;
+  }
+  .add-blog-container .add-blog-modal .add-blog-form .input-image label p {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.9);
+  }
+  .add-blog-container .add-blog-modal .add-blog-form .input-image input {
+    display: none;
+  }
+  .add-blog-container .add-blog-modal .add-blog-form .input-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .add-blog-container .add-blog-modal .add-blog-form .input-item label {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .add-blog-container .add-blog-modal .add-blog-form .input-item ::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.8rem;
+  }
+  .add-blog-container .add-blog-modal .add-blog-form .input-item ::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.8rem;
+  }
+  .add-blog-container .add-blog-modal .submit {
+    display: flex;
+    justify-content: end;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .add-blog-container .add-blog-modal .submit button:nth-child(1) {
+    padding: 10px 40px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .add-blog-container .add-blog-modal .submit button:nth-child(2) {
+    padding: 10px 50px;
+    background: #4b87e0;
+    font-weight: 600;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+  }
+  .update-blog-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+  }
+  .update-blog-container ::-webkit-scrollbar {
+    width: 0;
+  }
+  .update-blog-container .update-blog-modal {
+    width: 800px;
+    max-height: 700px;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    overflow-y: auto;
+  }
+  .update-blog-container .update-blog-modal .update-blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .update-blog-container .update-blog-modal .update-blog-header strong {
+    font-size: 1.3rem;
+  }
+  .update-blog-container .update-blog-modal .update-blog-header i {
+    font-size: 32px;
+    cursor: pointer;
+  }
+  .update-blog-container .update-blog-modal .update-blog-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+  }
+  .update-blog-container .update-blog-modal .update-blog-form label {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .update-blog-container .update-blog-modal .update-blog-form input {
+    padding: 12px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .update-blog-container .update-blog-modal .update-blog-form .input-image {
+    position: relative;
+    margin-top: 30px;
+    width: 300px;
+    height: 220px;
+    border: 1px dashed rgba(0, 0, 0, 0.3);
+    align-self: center;
+    border-radius: 15px;
+  }
+  .update-blog-container .update-blog-modal .update-blog-form .input-image .bx-trash-alt {
+    position: absolute;
+    left: 110%;
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+  }
+  .update-blog-container .update-blog-modal .update-blog-form .input-image label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+  }
+  .update-blog-container .update-blog-modal .update-blog-form .input-image label img {
+    width: 300px;
+    height: 220px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px;
+  }
+  .update-blog-container .update-blog-modal .update-blog-form .input-image label i {
+    font-size: 40px;
+  }
+  .update-blog-container .update-blog-modal .update-blog-form .input-image label p {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.9);
+  }
+  .update-blog-container .update-blog-modal .update-blog-form .input-image input {
+    display: none;
+  }
+  .update-blog-container .update-blog-modal .update-blog-form .input-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .update-blog-container .update-blog-modal .update-blog-form .input-item .ck-editor__editable {
+    min-height: 300px;
+    /* Adjust the minimum height as needed */
+    max-height: 600px;
+    /* You can also set a maximum height if needed */
+    overflow-y: auto;
+    /* Enable scrolling if content exceeds max height */
+    padding: 10px;
+    /* Add some padding for a more comfortable text entry */
+    border: 1px solid #ddd;
+    /* Optional: Adds a border for visual clarity */
+    border-radius: 4px;
+    /* Rounded corners for a smoother look */
+    outline: none;
+  }
+  .update-blog-container .update-blog-modal .update-blog-form .input-item label {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .update-blog-container .update-blog-modal .update-blog-form .input-item ::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.8rem;
+  }
+  .update-blog-container .update-blog-modal .update-blog-form .input-item ::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.8rem;
+  }
+  .update-blog-container .update-blog-modal .submit {
+    display: flex;
+    justify-content: end;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .update-blog-container .update-blog-modal .submit button:nth-child(1) {
+    padding: 10px 40px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .update-blog-container .update-blog-modal .submit button:nth-child(2) {
+    padding: 10px 50px;
+    background: #4b87e0;
+    font-weight: 600;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+  }
+  .add-product-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+  }
+  .add-product-container ::-webkit-scrollbar {
+    width: 0;
+  }
+  .add-product-container .add-product-modal {
+    width: 800px;
+    max-height: 700px;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    overflow-y: auto;
+  }
+  .add-product-container .add-product-modal .add-product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .add-product-container .add-product-modal .add-product-header strong {
+    font-size: 1.3rem;
+  }
+  .add-product-container .add-product-modal .add-product-header i {
+    font-size: 32px;
+    cursor: pointer;
+  }
+  .add-product-container .add-product-modal .add-product-detail {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .add-product-container .add-product-modal .add-product-detail .field {
+    display: flex;
+    flex-direction: column;
+  }
+  .add-product-container .add-product-modal .add-product-detail .field .field-label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 500;
+  }
+  .add-product-container .add-product-modal .add-product-detail .input-image {
+    position: relative;
+    margin-top: 30px;
+    width: 300px;
+    height: 220px;
+    border: 1px dashed rgba(0, 0, 0, 0.3);
+    align-self: center;
+    border-radius: 15px;
+  }
+  .add-product-container .add-product-modal .add-product-detail .input-image .bx-trash-alt {
+    position: absolute;
+    left: 110%;
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+  }
+  .add-product-container .add-product-modal .add-product-detail .input-image label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+  }
+  .add-product-container .add-product-modal .add-product-detail .input-image label img {
+    width: 300px;
+    height: 220px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px;
+  }
+  .add-product-container .add-product-modal .add-product-detail .input-image label i {
+    font-size: 40px;
+  }
+  .add-product-container .add-product-modal .add-product-detail .input-image label p {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.9);
+  }
+  .add-product-container .add-product-modal .add-product-detail .input-image input {
+    display: none;
+  }
+  .add-product-container .add-product-modal .add-product-detail .input-field-name {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .add-product-container .add-product-modal .add-product-detail .input-field-name label {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  .add-product-container .add-product-modal .add-product-detail .input-field-name input {
+    padding: 12px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .add-product-container .add-product-modal .add-product-detail .input-field-cate {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .add-product-container .add-product-modal .add-product-detail .input-field-cate label {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  .add-product-container .add-product-modal .add-product-detail .input-field-cate select {
+    padding: 12px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .add-product-container .add-product-modal .add-product-detail .input-field-des {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .add-product-container .add-product-modal .add-product-detail .input-field-des label {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  .add-product-container .add-product-modal .add-product-detail .ck-editor__editable {
+    min-height: 300px;
+    max-height: 600px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    font-size: 0.9rem;
+  }
+  .add-product-container .add-product-modal .add-product-detail .invalid {
+    color: red;
+    font-size: 0.75rem;
+  }
+  .add-product-container .add-product-modal .add-product-detail .input-two-fields {
+    display: flex;
+    justify-content: space-between;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .add-product-container .add-product-modal .add-product-detail .input-two-fields .input-field {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .add-product-container .add-product-modal .add-product-detail .input-two-fields .input-field label {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  .add-product-container .add-product-modal .add-product-detail .input-two-fields .input-field input {
+    padding: 12px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .add-product-container .add-product-modal .submit {
+    display: flex;
+    justify-content: end;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .add-product-container .add-product-modal .submit span {
+    padding: 10px 40px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  .add-product-container .add-product-modal .submit button:nth-child(2) {
+    padding: 10px 50px;
+    background: #4b87e0;
+    font-weight: 600;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+  }
+  .update-product-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+  }
+  .update-product-container ::-webkit-scrollbar {
+    width: 0;
+  }
+  .update-product-container .update-product-modal {
+    width: 800px;
+    max-height: 700px;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    overflow-y: auto;
+  }
+  .update-product-container .update-product-modal .loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 800px;
+  }
+  .update-product-container .update-product-modal .update-product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .update-product-container .update-product-modal .update-product-header strong {
+    font-size: 1.3rem;
+  }
+  .update-product-container .update-product-modal .update-product-header i {
+    font-size: 32px;
+    cursor: pointer;
+  }
+  .update-product-container .update-product-modal .update-product-detail {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .update-product-container .update-product-modal .update-product-detail .field {
+    display: flex;
+    flex-direction: column;
+  }
+  .update-product-container .update-product-modal .update-product-detail .field .field-label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 500;
+  }
+  .update-product-container .update-product-modal .update-product-detail .input-image {
+    position: relative;
+    margin-top: 30px;
+    width: 300px;
+    height: 220px;
+    border: 1px dashed rgba(0, 0, 0, 0.3);
+    align-self: center;
+    border-radius: 15px;
+  }
+  .update-product-container .update-product-modal .update-product-detail .input-image .bx-trash-alt {
+    position: absolute;
+    left: 110%;
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+  }
+  .update-product-container .update-product-modal .update-product-detail .input-image label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+  }
+  .update-product-container .update-product-modal .update-product-detail .input-image label img {
+    width: 300px;
+    height: 220px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px;
+  }
+  .update-product-container .update-product-modal .update-product-detail .input-image label i {
+    font-size: 40px;
+  }
+  .update-product-container .update-product-modal .update-product-detail .input-image label p {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.9);
+  }
+  .update-product-container .update-product-modal .update-product-detail .input-image input {
+    display: none;
+  }
+  .update-product-container .update-product-modal .update-product-detail .input-field-name {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .update-product-container .update-product-modal .update-product-detail .input-field-name label {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  .update-product-container .update-product-modal .update-product-detail .input-field-name input {
+    padding: 12px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .update-product-container .update-product-modal .update-product-detail .input-field-cate {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .update-product-container .update-product-modal .update-product-detail .input-field-cate label {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  .update-product-container .update-product-modal .update-product-detail .input-field-cate select {
+    padding: 12px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .update-product-container .update-product-modal .update-product-detail .input-field-des {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .update-product-container .update-product-modal .update-product-detail .input-field-des label {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  .update-product-container .update-product-modal .update-product-detail .ck-editor__editable {
+    min-height: 300px;
+    max-height: 600px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    font-size: 0.9rem;
+  }
+  .update-product-container .update-product-modal .update-product-detail .invalid {
+    color: red;
+    font-size: 0.75rem;
+  }
+  .update-product-container .update-product-modal .update-product-detail .input-two-fields {
+    display: flex;
+    justify-content: space-between;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .update-product-container .update-product-modal .update-product-detail .input-two-fields .input-field {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .update-product-container .update-product-modal .update-product-detail .input-two-fields .input-field label {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  .update-product-container .update-product-modal .update-product-detail .input-two-fields .input-field input {
+    padding: 12px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .update-product-container .update-product-modal .submit {
+    display: flex;
+    justify-content: end;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .update-product-container .update-product-modal .submit span {
+    padding: 10px 40px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  .update-product-container .update-product-modal .submit button:nth-child(2) {
+    padding: 10px 50px;
+    background: #4b87e0;
+    font-weight: 600;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=modal.css.map */

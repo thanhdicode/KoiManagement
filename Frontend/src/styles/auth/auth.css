@@ -1,0 +1,894 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+select,
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.cover {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+}
+.cover .loading {
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cover img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+.cover .login-container {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  padding: 80px 150px;
+  display: flex;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  justify-content: space-between;
+}
+.cover .login-container .login-main {
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #131313;
+  border-radius: 15px;
+  padding: 60px 0;
+}
+.cover .login-container .login-main .login-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 40px;
+  row-gap: 15px;
+}
+.cover .login-container .login-main .login-header img {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: static;
+  z-index: 2;
+}
+.cover .login-container .login-main .login-header div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+}
+.cover .login-container .login-main .login-header div strong {
+  font-family: "Roboto Mono", monospace;
+  color: #BCAB6F;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+.cover .login-container .login-main .login-header div p {
+  color: #BCAB6F;
+  font-weight: 400;
+  font-size: 0.85rem;
+}
+.cover .login-container .login-main .login-form {
+  margin-top: 20px;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.cover .login-container .login-main .login-form .input-item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.cover .login-container .login-main .login-form .input-item label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+}
+.cover .login-container .login-main .login-form .input-item div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+}
+.cover .login-container .login-main .login-form .input-item div ::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+.cover .login-container .login-main .login-form .input-item div ::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+.cover .login-container .login-main .login-form .input-item div input {
+  width: 100%;
+  padding: 12px 20px;
+}
+.cover .login-container .login-main .login-form .input-item div span {
+  position: absolute;
+  left: 93%;
+  color: rgba(255, 255, 255, 0.7);
+}
+.cover .login-container .login-main .login-form a {
+  font-size: 0.7rem;
+  color: #BCAB6F;
+}
+.cover .login-container .login-main .login-form a:hover {
+  text-decoration: underline;
+}
+.cover .login-container .login-main .login-form .fail {
+  font-size: 0.7rem;
+  color: rgb(243, 74, 74);
+}
+.cover .login-container .login-main .login-form input[type=submit] {
+  padding: 5px 0;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #BCAB6F;
+  font-family: "Roboto Mono", monospace;
+  transition: 0.4s;
+}
+.cover .login-container .login-main .login-form input[type=submit]:hover {
+  background: rgba(255, 255, 255, 0.7);
+  color: black;
+}
+.cover .login-container .login-main .or {
+  position: relative;
+  margin: 35px 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.cover .login-container .login-main .or p {
+  position: absolute;
+  padding: 15px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 400;
+  left: 46%;
+  top: -23px;
+  background: #131313;
+}
+.cover .login-container .login-main .custom-google-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  margin: 0 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: 0.4s;
+}
+.cover .login-container .login-main .oauth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  margin: 0 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: 0.4s;
+}
+.cover .login-container .login-main .oauth i,
+.cover .login-container .login-main .oauth p {
+  color: rgba(255, 255, 255, 0.7);
+}
+.cover .login-container .login-main .oauth p {
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.9rem;
+}
+.cover .login-container .login-main .oauth i {
+  font-size: 20px;
+}
+.cover .login-container .login-main .oauth:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.cover .login-container .login-main .signup-link {
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  margin-top: 20px;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+.cover .login-container .login-main .signup-link p,
+.cover .login-container .login-main .signup-link a {
+  font-size: 0.75rem;
+}
+.cover .login-container .login-main .signup-link p {
+  color: rgba(255, 255, 255, 0.7);
+}
+.cover .login-container .login-main .signup-link a {
+  color: #BCAB6F;
+}
+.cover .login-container .login-right {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  row-gap: 30px;
+}
+.cover .login-container .login-right h2 {
+  font-size: 50px;
+  font-family: "Roboto Mono", monospace;
+  color: white;
+  width: 7em;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.cover .login-container .login-right .type-writer {
+  animation: typewriter 1.5s steps(44, end) 1s 1 normal both;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 7em;
+  }
+}
+.cover .login-container .login-right p {
+  font-size: 24px;
+  font-family: "Roboto Mono", monospace;
+  color: white;
+  text-align: end;
+}
+
+@media only screen and (max-width: 1537px) {
+  .signup-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+    background: #131313;
+    padding: 20px;
+    display: flex;
+  }
+  .signup-container .loading {
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .signup-container .signup-main {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .signup-container .signup-main img {
+    width: 100px;
+    height: 100px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .signup-container .signup-main .signup-main-header {
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    margin-top: 15px;
+  }
+  .signup-container .signup-main .signup-main-header strong,
+  .signup-container .signup-main .signup-main-header p {
+    color: #BCAB6F;
+  }
+  .signup-container .signup-main .signup-main-header strong {
+    font-size: 26px;
+    font-weight: 500;
+  }
+  .signup-container .signup-main .signup-main-header p {
+    font-size: 0.75rem;
+  }
+  .signup-container .signup-main .signup-oauth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 0;
+    margin: 20px 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.4s;
+  }
+  .signup-container .signup-main .signup-oauth i,
+  .signup-container .signup-main .signup-oauth p {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .signup-container .signup-main .signup-oauth p {
+    font-size: 0.8rem;
+  }
+  .signup-container .signup-main .signup-oauth i {
+    font-size: 16px;
+  }
+  .signup-container .signup-main .or {
+    position: relative;
+    margin: 10px 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .signup-container .signup-main .or p {
+    position: absolute;
+    padding: 10px;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 400;
+    left: 46%;
+    top: -19px;
+    background: #131313;
+  }
+  .signup-container .signup-main .signup-form {
+    margin-top: 10px;
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .signup-container .signup-main .signup-form .input-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .signup-container .signup-main .signup-form .input-item label {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+  }
+  .signup-container .signup-main .signup-form .input-item div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+  }
+  .signup-container .signup-main .signup-form .input-item div ::-moz-placeholder {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .signup-container .signup-main .signup-form .input-item div ::placeholder {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .signup-container .signup-main .signup-form .input-item div input {
+    width: 100%;
+    padding: 8px 15px;
+    font-size: 0.7rem;
+  }
+  .signup-container .signup-main .signup-form .input-item div span {
+    position: absolute;
+    left: 93%;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .signup-container .signup-main .signup-form .fail {
+    font-size: 0.7rem;
+    color: rgb(243, 74, 74);
+  }
+  .signup-container .signup-main .signup-form input[type=submit] {
+    margin-top: 5px;
+    padding: 10px 0;
+    font-size: 0.8rem;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #BCAB6F;
+    font-family: "Roboto Mono", monospace;
+    transition: 0.4s;
+  }
+  .signup-container .signup-main .signup-form input[type=submit]:hover {
+    background: rgba(255, 255, 255, 0.7);
+    color: black;
+  }
+  .signup-container .signup-main .login-link {
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+    margin-top: 20px;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+  }
+  .signup-container .signup-main .login-link p,
+  .signup-container .signup-main .login-link a {
+    font-size: 0.7rem;
+  }
+  .signup-container .signup-main .login-link p {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .signup-container .signup-main .login-link a {
+    color: #BCAB6F;
+  }
+  .signup-container .signup-intro {
+    width: 50%;
+    height: 100%;
+    position: relative;
+  }
+  .signup-container .signup-intro img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 20px;
+    position: absolute;
+  }
+  .signup-container .signup-intro .intro {
+    position: absolute;
+    border-radius: 20px;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px 60px;
+    justify-content: center;
+    row-gap: 20px;
+  }
+  .signup-container .signup-intro .intro strong,
+  .signup-container .signup-intro .intro p {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .signup-container .signup-intro .intro strong {
+    width: 80%;
+    font-size: 34px;
+    font-weight: 500;
+  }
+  .signup-container .signup-intro .intro p {
+    font-size: 0.8rem;
+  }
+}
+.cover {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+}
+.cover .loading {
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cover .forget-container {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  padding: 60px 95px;
+  display: flex;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  justify-content: space-between;
+}
+.cover .forget-container .forget-main {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  background: #131313;
+  border-radius: 15px;
+  padding: 40px 15px;
+  row-gap: 10px;
+  align-self: center;
+}
+.cover .forget-container .forget-main .forget-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  row-gap: 10px;
+}
+.cover .forget-container .forget-main .forget-header div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+.cover .forget-container .forget-main .forget-header div strong {
+  font-family: "Roboto Mono", monospace;
+  color: #BCAB6F;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.cover .forget-container .forget-main .forget-header div p {
+  color: #BCAB6F;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+.cover .forget-container .forget-main .forget-form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+  row-gap: 10px;
+}
+.cover .forget-container .forget-main .forget-form ::-moz-placeholder {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+.cover .forget-container .forget-main .forget-form ::placeholder {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+.cover .forget-container .forget-main .forget-form input[type=text] {
+  padding-bottom: 7px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.7rem;
+}
+.cover .forget-container .forget-main .forget-form .error {
+  margin-top: 10px;
+  font-size: 0.7rem;
+  color: rgb(243, 74, 74);
+}
+.cover .forget-container .forget-main .forget-form input[type=submit] {
+  margin-top: 10px;
+  padding: 12px 0;
+  font-size: 0.8rem;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #BCAB6F;
+  font-family: "Roboto Mono", monospace;
+  transition: 0.4s;
+}
+.cover .forget-container .forget-main .forget-form input[type=submit]:hover {
+  background: rgba(255, 255, 255, 0.7);
+  color: black;
+}
+.cover .forget-container .forget-main a {
+  margin-top: 5px;
+  font-size: 0.6rem;
+  color: #BCAB6F;
+  padding: 0 40px;
+}
+.cover .forget-container .forget-right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.cover .forget-container .forget-right p {
+  font-size: 18px;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.7);
+}
+.cover .reset-container {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  padding: 60px 95px;
+  display: flex;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  justify-content: space-between;
+}
+.cover .reset-container .reset-main {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  background: #131313;
+  border-radius: 15px;
+  padding: 40px 15px;
+  row-gap: 10px;
+  align-self: center;
+}
+.cover .reset-container .reset-main .reset-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  row-gap: 10px;
+}
+.cover .reset-container .reset-main .reset-header div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+.cover .reset-container .reset-main .reset-header div strong {
+  font-family: "Roboto Mono", monospace;
+  color: #BCAB6F;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.cover .reset-container .reset-main .reset-header div p {
+  color: #BCAB6F;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+.cover .reset-container .reset-main .reset-form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+  row-gap: 20px;
+}
+.cover .reset-container .reset-main .reset-form .input-item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.cover .reset-container .reset-main .reset-form .input-item label {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+}
+.cover .reset-container .reset-main .reset-form .input-item div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+.cover .reset-container .reset-main .reset-form .input-item div ::-moz-placeholder {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+.cover .reset-container .reset-main .reset-form .input-item div ::placeholder {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+.cover .reset-container .reset-main .reset-form .input-item div input {
+  width: 100%;
+  padding: 8px 15px;
+  font-size: 0.7rem;
+}
+.cover .reset-container .reset-main .reset-form .input-item div span {
+  position: absolute;
+  left: 93%;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.cover .reset-container .reset-main .reset-form input[type=submit] {
+  margin-top: 10px;
+  padding: 12px 0;
+  font-size: 0.8rem;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #BCAB6F;
+  font-family: "Roboto Mono", monospace;
+  transition: 0.4s;
+}
+.cover .reset-container .reset-main .reset-form input[type=submit]:hover {
+  background: rgba(255, 255, 255, 0.7);
+  color: black;
+}
+.cover .reset-container .reset-main .error {
+  padding: 0 40px;
+  margin-top: 10px;
+  font-size: 0.7rem;
+  color: rgb(243, 74, 74);
+  text-align: center;
+}
+.cover .reset-container .reset-right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.cover .reset-container .reset-right p {
+  font-size: 18px;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.7);
+}
+.cover .login-container {
+  padding: 60px 95px;
+}
+.cover .login-container .login-main {
+  padding: 40px 15px;
+  row-gap: 10px;
+}
+.cover .login-container .login-main .login-header {
+  padding: 0 20px;
+  row-gap: 10px;
+}
+.cover .login-container .login-main .login-header img {
+  width: 100px;
+  height: 100px;
+}
+.cover .login-container .login-main .login-header div {
+  row-gap: 10px;
+}
+.cover .login-container .login-main .login-header div strong {
+  font-size: 20px;
+}
+.cover .login-container .login-main .login-header div p {
+  font-size: 0.75rem;
+}
+.cover .login-container .login-main .login-form {
+  padding: 0 30px;
+}
+.cover .login-container .login-main .login-form .input-item {
+  row-gap: 10px;
+}
+.cover .login-container .login-main .login-form .input-item label {
+  font-size: 0.7rem;
+}
+.cover .login-container .login-main .login-form .input-item div {
+  border-radius: 10px;
+}
+.cover .login-container .login-main .login-form .input-item div ::-moz-placeholder {
+  font-size: 0.7rem;
+}
+.cover .login-container .login-main .login-form .input-item div ::placeholder {
+  font-size: 0.7rem;
+}
+.cover .login-container .login-main .login-form .input-item div input {
+  padding: 10px 15px;
+  font-size: 0.7rem;
+}
+.cover .login-container .login-main .login-form .input-item div span {
+  font-size: 20px;
+}
+.cover .login-container .login-main .login-form a {
+  font-size: 0.65rem;
+}
+.cover .login-container .login-main .login-form input[type=submit] {
+  padding: 10px 0;
+  font-size: 0.8rem;
+}
+.cover .login-container .login-main .or {
+  margin: 5px 30px;
+}
+.cover .login-container .login-main .or p {
+  padding: 10px;
+  left: 47%;
+  top: -18px;
+  font-size: 0.7rem;
+}
+.cover .login-container .login-main .oauth {
+  padding: 7px 0;
+  margin: 0 30px;
+}
+.cover .login-container .login-main .oauth p {
+  font-size: 0.75rem;
+}
+.cover .login-container .login-main .oauth i {
+  font-size: 18px;
+}
+.cover .login-container .login-main .signup-link {
+  padding: 0 30px;
+  margin-top: 0;
+}
+.cover .login-container .login-main .signup-link p,
+.cover .login-container .login-main .signup-link a {
+  font-size: 0.65rem;
+}
+.cover .login-container .login-right h2 {
+  font-size: 35px;
+}
+.cover .login-container .login-right p {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 1537px) {
+  .email-verify-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #131313;
+  }
+  .email-verify-container .email-verify {
+    width: 600px;
+    max-height: 700px;
+    background: black;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  .email-verify-container .email-verify .email-verify-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+  }
+  .email-verify-container .email-verify .email-verify-header h2 {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.3rem;
+  }
+  .email-verify-container .email-verify .email-verify-header p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    font-weight: 300;
+  }
+  .email-verify-container .email-verify form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .email-verify-container .email-verify form .otp-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+  }
+  .email-verify-container .email-verify form .otp-inputs input {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .email-verify-container .email-verify form .otp-inputs input:focus {
+    border-color: #BCAB6F;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  .email-verify-container .email-verify form .otp-inputs input:hover {
+    border-color: rgba(255, 255, 255, 0.7);
+  }
+  .email-verify-container .email-verify form .error {
+    font-size: 0.7rem;
+    color: red !important;
+  }
+  .email-verify-container .email-verify form button {
+    margin-top: 20px;
+    padding: 10px 100px;
+    background: #BCAB6F;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+}/*# sourceMappingURL=auth.css.map */

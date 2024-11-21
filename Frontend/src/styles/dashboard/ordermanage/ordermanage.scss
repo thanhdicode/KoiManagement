@@ -1,0 +1,107 @@
+@import "../../global/global.scss";
+
+@media only screen and (max-width: 1537px) {
+    .order-manage-container {
+        width: 100vw;
+        max-height: 100vh;
+        position: relative;
+        display: flex;
+        overflow-y: hidden;
+
+        .order-manage {
+            border-right: 1px solid rgba(0, 0, 0, .2);
+            width: 40%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+
+            .order-manage-header {
+                padding: 25px 40px;
+
+                strong {
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                }
+            }
+
+            .order-manage-utils {
+                display: flex;
+                padding: 20px 40px;
+                justify-content: space-between;
+
+                .search-order {
+                    display: flex;
+                    padding: 5px 10px;
+                    align-items: center;
+                    border: 1px solid rgba(0, 0, 0, .2);
+                    column-gap: 10px;
+                    border-radius: 10px;
+
+                    i {
+                        font-size: 0.85rem;
+                    }
+
+                    ::placeholder {
+                        font-size: 0.7rem;
+                    }
+
+                    input {
+                        width: 170px;
+                        font-size: 0.7rem;
+                        color: $fade-black;
+                    }
+                }
+
+                .filter {
+                    width: 200px;
+                    display: flex;
+                    align-items: center;
+                    background: rgba(0, 0, 0, .1);
+                    border-radius: 10px;
+                    position: relative;
+
+                    select {
+                        font-size: 0.7rem;
+                        width: 100%;
+                        padding: 5px 15px;
+                        color: black;
+
+                        option {
+                            background: white;
+                            color: black;
+                        }
+                    }
+
+                    i {
+                        left: 88%;
+                        font-weight: 100;
+                        font-size: 18px;
+                        position: absolute;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+
+        .my-order-empty {
+            width: calc(100% - 42.5% - 220px);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 15px;
+
+            strong {
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: $fade-black;
+            }
+
+            p {
+                font-size: 0.85rem;
+                font-weight: 400;
+            }
+        }
+    }
+}

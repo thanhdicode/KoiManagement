@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+select,
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 1537px) {
+  .blog-manage-container {
+    width: 100vw;
+    max-height: 100vh;
+    position: relative;
+    display: flex;
+  }
+  .blog-manage-container .blog-manage {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-manage-container .blog-manage .blog-manage-header {
+    padding: 25px 40px;
+  }
+  .blog-manage-container .blog-manage .blog-manage-header strong {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  .blog-manage-container .blog-manage .blog-manage-utils {
+    display: flex;
+    padding: 20px 40px;
+    justify-content: space-between;
+  }
+  .blog-manage-container .blog-manage .blog-manage-utils .filter {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+  }
+  .blog-manage-container .blog-manage .blog-manage-utils .filter select {
+    font-size: 0.7rem;
+    width: 100%;
+    padding: 5px 15px;
+    color: black;
+  }
+  .blog-manage-container .blog-manage .blog-manage-utils .filter select option {
+    background: white;
+    color: black;
+  }
+  .blog-manage-container .blog-manage .blog-manage-utils .filter i {
+    left: 88%;
+    font-weight: 100;
+    font-size: 18px;
+    position: absolute;
+    z-index: -1;
+  }
+  .blog-manage-container .blog-manage .blog-manage-utils .add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+    background: #4B87E0;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .blog-manage-container .blog-manage .blog-manage-utils .add i {
+    color: white;
+    font-size: 18px;
+  }
+  .blog-manage-container .blog-manage .blog-manage-utils .add p {
+    color: white;
+    font-size: 0.7rem;
+  }
+  .blog-manage-container .my-blog-empty {
+    width: calc(57.5% - 220px);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 15px;
+  }
+  .blog-manage-container .my-blog-empty strong {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.9);
+  }
+  .blog-manage-container .my-blog-empty p {
+    font-size: 0.85rem;
+    font-weight: 400;
+  }
+}/*# sourceMappingURL=myblog.css.map */

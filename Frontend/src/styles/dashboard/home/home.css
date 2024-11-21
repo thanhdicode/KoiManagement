@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+select,
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 1537px) {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+  .homemem-dashboard-container {
+    width: 100%;
+    max-height: 100vh;
+    position: relative;
+    display: flex;
+    overflow-y: auto;
+  }
+  .homemem-dashboard-container .dashboard {
+    width: calc(100% - 220px);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .homemem-dashboard-container .dashboard .dashboard-header {
+    padding: 25px 40px;
+  }
+  .homemem-dashboard-container .dashboard .dashboard-header strong {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  .homemem-dashboard-container .dashboard .section1 {
+    padding: 0 40px;
+    display: flex;
+    height: 300px;
+    -moz-column-gap: 25px;
+         column-gap: 25px;
+    justify-content: space-between;
+  }
+  .homemem-dashboard-container .dashboard .section1 .item {
+    width: 70%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .homemem-dashboard-container .dashboard .section1 .item .item1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .homemem-dashboard-container .dashboard .section1 .item .item1 strong {
+    color: black;
+    font-size: 1.2rem;
+  }
+  .homemem-dashboard-container .dashboard .section1 .item .item1 p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.9);
+  }
+  .homemem-dashboard-container .dashboard .section1 .item .item2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+  }
+  .homemem-dashboard-container .dashboard .section1 .item .item2 img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+  }
+  .homemem-dashboard-container .dashboard .section1 .info {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+  .homemem-dashboard-container .dashboard .section1 .info .small-item {
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    border-radius: 15px;
+    background: black;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+  .homemem-dashboard-container .dashboard .section1 .info .small-item div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 20px;
+  }
+  .homemem-dashboard-container .dashboard .section1 .info .small-item div strong {
+    color: white;
+    font-size: 1.2rem;
+  }
+  .homemem-dashboard-container .dashboard .section1 .info .small-item div p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .homemem-dashboard-container .dashboard .section1 .info .small-item i {
+    font-size: 90px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .homemem-dashboard-container .dashboard .chart-container {
+    margin-top: 20px;
+    padding: 0 40px;
+  }
+  .homemem-dashboard-container .dashboard .chart-container .charts {
+    display: flex;
+    -moz-column-gap: 25px;
+         column-gap: 25px;
+  }
+  .homemem-dashboard-container .dashboard .chart-container .charts .left-chart {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding: 20px 15px;
+    border-radius: 15px;
+  }
+  .homemem-dashboard-container .dashboard .chart-container .charts .left-chart h3 {
+    font-size: 0.9rem;
+  }
+  .homemem-dashboard-container .dashboard .chart-container .charts .right-chart {
+    width: 67%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding: 20px 40px;
+    border-radius: 15px;
+  }
+  .homemem-dashboard-container .dashboard .chart-container .charts .right-chart h3 {
+    font-size: 0.9rem;
+  }
+  .homemem-dashboard-container .dashboard .summary-bottom {
+    margin-top: 20px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .homemem-dashboard-container .dashboard .summary-bottom .left-bottom {
+    width: 70%;
+    margin-right: 20px;
+    padding: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 15px;
+    background: white;
+  }
+  .homemem-dashboard-container .dashboard .summary-bottom .left-bottom table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .homemem-dashboard-container .dashboard .summary-bottom .left-bottom table th,
+  .homemem-dashboard-container .dashboard .summary-bottom .left-bottom table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  .homemem-dashboard-container .dashboard .summary-bottom .left-bottom table th {
+    background-color: #f4f4f4;
+  }
+  .homemem-dashboard-container .dashboard .summary-bottom .left-bottom table button {
+    background-color: yellowgreen;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .homemem-dashboard-container .dashboard .summary-bottom .right-bottom {
+    width: 30%;
+    padding: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 15px;
+    background: white;
+  }
+  .homemem-dashboard-container .dashboard .summary-bottom .right-bottom table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .homemem-dashboard-container .dashboard .summary-bottom .right-bottom table th,
+  .homemem-dashboard-container .dashboard .summary-bottom .right-bottom table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  .homemem-dashboard-container .dashboard .summary-bottom .right-bottom table th {
+    background-color: #f4f4f4;
+  }
+}/*# sourceMappingURL=home.css.map */

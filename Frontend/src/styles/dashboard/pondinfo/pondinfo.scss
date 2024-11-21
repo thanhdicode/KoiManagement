@@ -1,0 +1,73 @@
+@import "../../global/global.scss";
+
+@media only screen and (max-width: 1537px) {
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .pond-info-container {
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 40px;
+
+        .loading {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pond-info-image {
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 300px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 15px;
+            }
+        }
+
+        .pond-info-header {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 5px;
+
+            strong {
+                font-size: 1.1rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+                color: rgba(0, 0, 0, .7);
+            }
+        }
+
+        .pond-info-main {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 25px;
+
+            .info-item {
+                display: flex;
+                justify-content: space-between;
+
+                strong {
+                    font-size: 0.85rem;
+                }
+
+                p {
+                    font-size: 0.85rem;
+                    color: rgba(0, 0, 0, .7);
+                }
+            }
+        }
+    }
+}

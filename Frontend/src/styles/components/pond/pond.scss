@@ -1,0 +1,110 @@
+@import "../../global/global.scss";
+
+
+@media only screen and (max-width: 1537px) {
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .pond-list {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid rgba(0, 0, 0, .2);
+        overflow-y: auto;
+
+        .error-page {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                font-size: 1.1rem;
+                font-weight: 600;
+            }
+        }
+
+        .loading {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .empty-list {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: rgba(0, 0, 0, .7);
+            }
+        }
+
+        a {
+            display: flex;
+            // align-items: center;
+            padding: 15px 40px;
+            column-gap: 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, .2);
+            cursor: pointer;
+            transition: .4s;
+
+            img {
+                width: 75px;
+                height: 75px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+            .pond-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                div {
+                    display: flex;
+                    column-gap: 30px;
+                    align-items: center;
+
+                    strong {
+                        font-size: 0.9rem;
+                        color: black;
+                    }
+
+                    p {
+                        font-size: 0.7rem;
+                        color: $fade-black;
+                        font-weight: 400 !important;
+                    }
+                }
+
+                p {
+                    font-size: 0.8rem;
+                    color: black;
+                    font-weight: 600;
+                }
+
+                span {
+                    font-size: 0.9rem;
+                    color: green;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        a:hover {
+            background: rgba(0, 0, 0, 0.049);
+        }
+    }
+}

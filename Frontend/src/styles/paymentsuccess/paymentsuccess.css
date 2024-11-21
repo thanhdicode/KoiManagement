@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+select,
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 1537px) {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+  .payment-success-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .payment-success-container .payment-success {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #131313;
+  }
+  .payment-success-container .payment-success .payment-success-header {
+    padding-bottom: 50px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+  .payment-success-container .payment-success .payment-success-header i {
+    color: #40D195;
+    font-size: 50px;
+    padding: 15px;
+    border-radius: 50%;
+    background: #283C3A;
+  }
+  .payment-success-container .payment-success .payment-success-header strong {
+    margin-top: 10px;
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.3rem;
+    color: white;
+  }
+  .payment-success-container .payment-success .payment-success-header p {
+    font-size: 0.9rem;
+    font-family: "Roboto Mono", monospace;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .payment-success-container .payment-success .invoice {
+    padding: 30px 0;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    border-top: 2px dashed rgba(255, 255, 255, 0.6);
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.6);
+  }
+  .payment-success-container .payment-success .invoice .item {
+    display: flex;
+    justify-content: space-between;
+  }
+  .payment-success-container .payment-success .invoice .item p {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "Roboto Mono", monospace;
+  }
+  .payment-success-container .payment-success .invoice .item strong {
+    font-family: "Roboto Mono", monospace;
+    color: white;
+  }
+  .payment-success-container .payment-success .total {
+    padding: 30px 0;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .payment-success-container .payment-success .total p {
+    font-size: 1rem;
+    font-family: "Roboto Mono", monospace;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .payment-success-container .payment-success .total strong {
+    font-size: 1.1rem;
+    font-family: "Roboto Mono", monospace;
+    color: white;
+  }
+  .payment-success-container .payment-success button {
+    width: 40%;
+    padding: 10px 20px;
+    background: #40D195;
+    color: black;
+    font-weight: 800;
+    border-radius: 10px;
+    font-family: "Roboto Mono", monospace;
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=paymentsuccess.css.map */

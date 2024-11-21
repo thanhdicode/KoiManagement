@@ -1,0 +1,109 @@
+@import "../global/global.scss";
+
+@media only screen and (max-width: 1537px) {
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .payment-success-container {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+
+        .payment-success {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: $main-color;
+
+            .payment-success-header {
+                padding-bottom: 50px;
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 10px;
+
+                i {
+                    color: #40D195;
+                    font-size: 50px;
+                    padding: 15px;
+                    border-radius: 50%;
+                    background: #283C3A;
+                }
+
+                strong {
+                    margin-top: 10px;
+                    font-family: $main-font;
+                    font-size: 1.3rem;
+                    color: white;
+                }
+
+                p {
+                    font-size: 0.9rem;
+                    font-family: $main-font;
+                    color: $fade-white;
+                }
+            }
+
+            .invoice {
+                padding: 30px 0;
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                row-gap: 30px;
+                border-top: 2px dashed rgba(255, 255, 255, .6);
+                border-bottom: 2px dashed rgba(255, 255, 255, .6);
+
+                .item {
+                    display: flex;
+                    justify-content: space-between;
+
+                    p {
+                        color: $fade-white;
+                        font-family: $main-font;
+                    }
+
+                    strong {
+                        font-family: $main-font;
+                        color: white;
+                    }
+                }
+            }
+
+            .total {
+                padding: 30px 0;
+                width: 40%;
+                display: flex;
+                justify-content: space-between;
+
+                p {
+                    font-size: 1rem;
+                    font-family: $main-font;
+                    color: $fade-white;
+                }
+
+                strong {
+                    font-size: 1.1rem;
+                    font-family: $main-font;
+                    color: white;
+                }
+            }
+
+            button {
+                width: 40%;
+                padding: 10px 20px;
+                background: #40D195;
+                color: black;
+                font-weight: 800;
+                border-radius: 10px;
+                font-family: $main-font;
+                cursor: pointer;
+            }
+        }
+    }
+}

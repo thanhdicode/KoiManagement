@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+select,
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 1537px) {
+  .user-setting-container {
+    width: 100vw;
+    max-height: 100vh;
+    position: relative;
+    display: flex;
+    overflow-y: hidden;
+  }
+  .user-setting-container .user-setting {
+    width: calc(100% - 220px);
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+  .user-setting-container .user-setting .error-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .user-setting-container .user-setting .error-page .p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .user-setting-container .user-setting .loading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .user-setting-container .user-setting .setting-header {
+    padding: 25px 40px;
+  }
+  .user-setting-container .user-setting .setting-header strong {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  .user-setting-container .user-setting .profile-form {
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .user-setting-container .user-setting .profile-form .header {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    margin-bottom: 20px;
+  }
+  .user-setting-container .user-setting .profile-form .header strong {
+    font-size: 1.1rem;
+  }
+  .user-setting-container .user-setting .profile-form .header p {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .user-setting-container .user-setting .profile-form .item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .user-setting-container .user-setting .profile-form .item label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .user-setting-container .user-setting .profile-form .item input {
+    color: rgba(0, 0, 0, 0.8);
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .user-setting-container .user-setting .profile-form button {
+    margin-top: 20px;
+    width: 20%;
+    padding: 10px 40px;
+    background: black;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .user-setting-container .user-setting .security-form {
+    margin-bottom: 50px;
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .user-setting-container .user-setting .security-form .header {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .user-setting-container .user-setting .security-form .header div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .user-setting-container .user-setting .security-form .header div strong {
+    font-size: 1.1rem;
+  }
+  .user-setting-container .user-setting .security-form .header div p {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .user-setting-container .user-setting .security-form .header #enable {
+    padding: 8px 20px !important;
+    background: red !important;
+    font-size: 0.75rem !important;
+    border-radius: 15px !important;
+    color: white !important;
+    cursor: pointer !important;
+  }
+  .user-setting-container .user-setting .security-form .header #disable {
+    padding: 8px 20px !important;
+    background: black !important;
+    font-size: 0.75rem !important;
+    border-radius: 15px !important;
+    color: white !important;
+    cursor: pointer !important;
+  }
+  .user-setting-container .user-setting .security-form .item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .user-setting-container .user-setting .security-form .item label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .user-setting-container .user-setting .security-form .item input {
+    color: rgba(0, 0, 0, 0.8);
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .user-setting-container .user-setting .security-form #submit {
+    margin-top: 20px;
+    width: 20%;
+    padding: 10px 40px;
+    background: black;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+}/*# sourceMappingURL=setting.css.map */

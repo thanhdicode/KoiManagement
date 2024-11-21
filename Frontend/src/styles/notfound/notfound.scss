@@ -1,0 +1,95 @@
+@import "../global/global.scss";
+
+@media only screen and (max-width: 1537px) {
+    .not-found-container {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $main-color;
+
+        .not-found {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+
+            i {
+                font-size: 70px;
+                color: $fade-white;
+            }
+
+            strong {
+                font-size: 1.8rem;
+                color: $fade-white;
+            }
+
+            p {
+                font-size: 1rem;
+                font-weight: 300;
+                color: rgba(255, 255, 255, .7);
+            }
+
+            a {
+                padding: 10px 50px;
+                border: 1px solid rgba(255, 255, 255, .2);
+                border-radius: 10px;
+                transition: .4s;
+                color: $fade-white;
+                font-size: 0.9rem;
+            }
+
+            a:hover {
+                background: rgba(255, 255, 255, .1);
+            }
+        }
+    }
+
+    .unauthorize-container {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $main-color;
+
+        .unauthorize {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+
+            i {
+                font-size: 70px;
+                color: $fade-white;
+            }
+
+            strong {
+                font-size: 1.8rem;
+                color: $fade-white;
+            }
+
+            p {
+                font-size: 1rem;
+                font-weight: 300;
+                color: rgba(255, 255, 255, .7);
+            }
+
+            a {
+                padding: 10px 50px;
+                border: 1px solid rgba(255, 255, 255, .2);
+                border-radius: 10px;
+                transition: .4s;
+                color: $fade-white;
+                font-size: 0.9rem;
+            }
+
+            a:hover {
+                background: rgba(255, 255, 255, .1);
+            }
+        }
+    }
+}

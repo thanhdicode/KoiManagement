@@ -1,0 +1,68 @@
+@import "../../global/global.scss";
+
+@media only screen and (max-width: 1537px) {
+  .my-blog-list {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    .error-page {
+      width: 100%;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .p {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.7);
+      }
+    }
+
+    .loading {
+      width: 100%;
+      height: 600px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+
+    .empty-list {
+      width: 100%;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.7);
+      }
+    }
+
+    a {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 40px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      justify-content: space-between;
+      row-gap: 5px;
+      transition: 0.4s;
+
+      strong {
+        color: black;
+      }
+
+      p {
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 0.75rem;
+      }
+    }
+
+    a:hover {
+      background: rgba(0, 0, 0, 0.049);
+    }
+  }
+}

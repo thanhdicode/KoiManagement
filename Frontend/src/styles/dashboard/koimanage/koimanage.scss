@@ -1,0 +1,58 @@
+@import "../../global/global.scss";
+
+@media only screen and (max-width: 1537px) {
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .koimamange-container {
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 40px 40px 40px;
+        scroll-behavior: smooth;
+
+        .koimanage-header {
+            padding: 25px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                row-gap: 5px;
+
+                strong {
+                    font-size: 1.1rem;
+                }
+
+                p {
+                    font-size: 0.8rem;
+                    color: rgba(0, 0, 0, .7);
+                }
+            }
+
+            .add-koi {
+                display: flex;
+                padding: 5px 20px;
+                justify-content: center;
+                align-items: center;
+                background: #4b87e0;
+                column-gap: 10px;
+                border-radius: 10px;
+                cursor: pointer;
+
+                p {
+                    font-size: 0.7rem;
+                    color: white;
+                }
+
+                i {
+                    font-size: 18px;
+                    color: white;
+                }
+            }
+        }
+    }
+}

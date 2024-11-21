@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+select,
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 1537px) {
+  .bloglist-container {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    row-gap: 40px;
+    background: #131313;
+  }
+  .bloglist-container .loading {
+    width: 100vw;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 40px;
+  }
+  .bloglist-container .blog-item {
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    max-height: 500px;
+    height: 500px;
+    overflow: hidden;
+    transition: 0.4s;
+    border-radius: 15px;
+  }
+  .bloglist-container .blog-item img {
+    width: 100%;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px;
+  }
+  .bloglist-container .blog-item small {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  .bloglist-container .blog-item strong {
+    font-family: "Roboto Mono", monospace;
+    color: white;
+    font-size: 1rem;
+    transition: 0.4s;
+  }
+  .bloglist-container .blog-item span {
+    margin-top: 20px;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+  }
+  .bloglist-container .blog-item:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 4px 15px rgba(255, 255, 255, 0.1);
+    transform: scale(1.03);
+  }
+}/*# sourceMappingURL=blog.css.map */

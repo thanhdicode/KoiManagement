@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+select,
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 1537px) {
+  .admin-order-detail-container {
+    width: calc(60% - 220px);
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+  }
+  .admin-order-detail-container .admin-order-detail-header {
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .admin-order-detail-container .admin-order-detail-header strong {
+    font-size: 1.1rem;
+  }
+  .admin-order-detail-container .admin-order-detail-header p {
+    font-size: 0.75rem;
+    padding: 5px 30px;
+    border-radius: 15px;
+    background: rgba(129, 237, 136, 0.621);
+    font-weight: 600;
+    color: rgb(17, 119, 26);
+  }
+  .admin-order-detail-container .admin-order-main {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 40px;
+  }
+  .admin-order-detail-container .admin-order-main .cart thead tr {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+  }
+  .admin-order-detail-container .admin-order-main .cart thead tr th {
+    font-size: 0.75rem;
+  }
+  .admin-order-detail-container .admin-order-main .cart thead tr th:nth-child(1) {
+    text-align: start;
+    padding-left: 5px;
+  }
+  .admin-order-detail-container .admin-order-main .cart thead tr th:nth-child(2) {
+    text-align: start;
+  }
+  .admin-order-detail-container .admin-order-main .cart thead tr th:nth-child(3) {
+    text-align: center;
+  }
+  .admin-order-detail-container .admin-order-main .cart thead tr th:nth-child(4) {
+    text-align: center;
+  }
+  .admin-order-detail-container .admin-order-main .cart tbody tr {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 12px 0;
+  }
+  .admin-order-detail-container .admin-order-main .cart tbody tr td {
+    font-size: 0.75rem;
+  }
+  .admin-order-detail-container .admin-order-main .cart tbody tr td:nth-child(1) {
+    padding-left: 10px;
+    text-align: start;
+  }
+  .admin-order-detail-container .admin-order-main .cart tbody tr td:nth-child(2) {
+    text-align: start;
+  }
+  .admin-order-detail-container .admin-order-main .cart tbody tr td:nth-child(3) {
+    text-align: center;
+  }
+  .admin-order-detail-container .admin-order-main .cart tbody tr td:nth-child(4) {
+    text-align: center;
+  }
+  .admin-order-detail-container .admin-order-main .info {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .admin-order-detail-container .admin-order-main .info .header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .admin-order-detail-container .admin-order-main .info .header strong {
+    font-size: 1.1rem;
+  }
+  .admin-order-detail-container .admin-order-main .info .header p {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .admin-order-detail-container .admin-order-main .info .main {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+  .admin-order-detail-container .admin-order-main .info .main .info-item {
+    display: flex;
+    justify-content: space-between;
+  }
+  .admin-order-detail-container .admin-order-main .info .main .info-item strong {
+    font-size: 0.85rem;
+  }
+  .admin-order-detail-container .admin-order-main .info .main .info-item p {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .admin-order-detail-container .admin-order-main .cancel {
+    margin: 40px 0;
+    padding: 10px 20px;
+    background: red;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=adminorderdetail.css.map */

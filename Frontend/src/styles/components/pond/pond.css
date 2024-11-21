@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+select,
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 1537px) {
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  .pond-list {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+  }
+  .pond-list .error-page {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pond-list .error-page p {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .pond-list .loading {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pond-list .empty-list {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pond-list .empty-list p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .pond-list a {
+    display: flex;
+    padding: 15px 40px;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .pond-list a img {
+    width: 75px;
+    height: 75px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+  }
+  .pond-list a .pond-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .pond-list a .pond-info div {
+    display: flex;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    align-items: center;
+  }
+  .pond-list a .pond-info div strong {
+    font-size: 0.9rem;
+    color: black;
+  }
+  .pond-list a .pond-info div p {
+    font-size: 0.7rem;
+    color: rgba(0, 0, 0, 0.9);
+    font-weight: 400 !important;
+  }
+  .pond-list a .pond-info p {
+    font-size: 0.8rem;
+    color: black;
+    font-weight: 600;
+  }
+  .pond-list a .pond-info span {
+    font-size: 0.9rem;
+    color: green;
+    font-weight: 600;
+  }
+  .pond-list a:hover {
+    background: rgba(0, 0, 0, 0.049);
+  }
+}/*# sourceMappingURL=pond.css.map */

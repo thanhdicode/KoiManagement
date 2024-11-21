@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+select,
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 1537px) {
+  .payment-fail-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #131313;
+    justify-content: center;
+  }
+  .payment-fail-container .payment-fail {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+  }
+  .payment-fail-container .payment-fail i {
+    color: #d14040;
+    font-size: 50px;
+    padding: 15px;
+    border-radius: 50%;
+    background: #3c2828;
+  }
+  .payment-fail-container .payment-fail strong {
+    margin-top: 10px;
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.3rem;
+    color: white;
+  }
+  .payment-fail-container .payment-fail p {
+    font-size: 0.9rem;
+    font-family: "Roboto Mono", monospace;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .payment-fail-container .payment-fail a {
+    margin-top: 20px;
+    padding: 12px 40px;
+    background: #d14040;
+    color: black;
+    font-weight: 800;
+    border-radius: 10px;
+    font-family: "Roboto Mono", monospace;
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=paymentfail.css.map */

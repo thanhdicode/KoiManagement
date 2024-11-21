@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+select,
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 1537px) {
+  .shop-container {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .shop-container .shop {
+    margin-top: 88px;
+    display: flex;
+    flex-direction: column;
+  }
+  .shop-container .shop .shop-header {
+    position: relative;
+    width: 100%;
+    padding: 80px 0;
+    background: #131313;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .shop-container .shop .shop-header strong {
+    color: white;
+    font-size: 30px;
+    font-family: "Roboto Mono", monospace;
+  }
+  .shop-container .shop .shop-header p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    font-weight: 400;
+    font-family: "Roboto Mono", monospace;
+  }
+  .shop-container .shop .shop-main {
+    width: 100%;
+    background: #131313;
+    display: flex;
+    flex-direction: column;
+  }
+  .shop-container .shop .shop-main .shop-main-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .shop-container .shop .shop-main .shop-main-header strong {
+    padding: 0 40px;
+    font-size: 1.1rem;
+    color: white;
+    font-family: "Roboto Mono", monospace;
+  }
+  .shop-container .shop .shop-main .shop-main-header .header-filter {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .shop-container .shop .shop-main .shop-main-header .header-filter p,
+  .shop-container .shop .shop-main .shop-main-header .header-filter i,
+  .shop-container .shop .shop-main .shop-main-header .header-filter select {
+    height: 60px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "Roboto Mono", monospace;
+  }
+  .shop-container .shop .shop-main .shop-main-header .header-filter i {
+    padding: 20px 40px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .shop-container .shop .shop-main .shop-main-header .header-filter i:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .shop-container .shop .shop-main .shop-main-header .header-filter p {
+    padding: 20px 40px;
+    font-size: 0.85rem;
+    font-weight: 400;
+  }
+  .shop-container .shop .shop-main .shop-main-header .header-filter select {
+    padding: 20px 60px;
+  }
+  .shop-container .shop .shop-main .shop-main-header .header-filter select option {
+    font-family: "Roboto Mono", monospace;
+  }
+  .shop-container .shop .shop-main .shop-main-list {
+    width: 100%;
+    display: flex;
+  }
+  .shop-container .shop .shop-main .end-product {
+    padding: 100px 0 50px 0;
+    background: #131313;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .shop-container .shop .shop-main .end-product p {
+    font-family: "Roboto Mono", monospace;
+    color: rgba(255, 255, 255, 0.5019607843);
+    font-size: 1.1rem;
+  }
+  .shop-container .shop .shop-main .infinity-scroll {
+    padding: 100px 0 50px 0;
+    background: #131313;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .shop-container .shop .shop-main .infinity-scroll strong {
+    cursor: pointer;
+    width: 250px;
+    text-align: center;
+    padding: 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: 0.4s;
+  }
+  .shop-container .shop .shop-main .infinity-scroll strong:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}/*# sourceMappingURL=shop.css.map */

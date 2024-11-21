@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+select,
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 1537px) {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+  .buynow-container {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+  }
+  .buynow-container .buynow {
+    display: flex;
+    height: calc(100vh - 100px);
+    background: #131313;
+    padding: 0 80px;
+  }
+  .buynow-container .buynow .buynow-main {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-right: 80px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .buynow-container .buynow .buynow-main .buynow-main-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    align-items: center;
+  }
+  .buynow-container .buynow .buynow-main .buynow-main-header a {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  .buynow-container .buynow .buynow-main .buynow-main-header a i {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .buynow-container .buynow .buynow-main .buynow-main-header a p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+  }
+  .buynow-container .buynow .buynow-main .buynow-main-header h2 {
+    font-family: "Roboto Mono", monospace;
+    color: white;
+    font-size: 26px;
+  }
+  .buynow-container .buynow .buynow-main .buynow-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+  .buynow-container .buynow .buynow-main .buynow-form .input-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .buynow-container .buynow .buynow-main .buynow-form .input-item label {
+    font-size: 0.8rem;
+    color: white;
+  }
+  .buynow-container .buynow .buynow-main .buynow-form .input-item input {
+    padding: 15px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+  }
+  .buynow-container .buynow .cart-review {
+    width: 50%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 80px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .buynow-container .buynow .cart-review .loading {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .buynow-container .buynow .cart-review .cart-review-header {
+    margin-bottom: 40px;
+  }
+  .buynow-container .buynow .cart-review .cart-review-header h2 {
+    font-family: "Roboto Mono", monospace;
+    color: white;
+    font-size: 26px;
+  }
+  .buynow-container .buynow .cart-review .cart-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    padding-bottom: 20px;
+  }
+  .buynow-container .buynow .cart-review .cart-list .cart-item {
+    width: 100%;
+    display: flex;
+    height: 170px;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .buynow-container .buynow .cart-review .cart-list .cart-item img {
+    width: 120px;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+  }
+  .buynow-container .buynow .cart-review .cart-list .cart-item .info {
+    width: calc(100% - 170px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .buynow-container .buynow .cart-review .cart-list .cart-item .info div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .buynow-container .buynow .cart-review .cart-list .cart-item .info div strong {
+    font-weight: 400;
+    color: white;
+    font-family: "Roboto Mono", monospace;
+  }
+  .buynow-container .buynow .cart-review .cart-list .cart-item .info div small {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .buynow-container .buynow .cart-review .cart-list .cart-item .info p {
+    padding-bottom: 30px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .buynow-container .buynow .cart-review .cart-list .cart-item .info .quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .buynow-container .buynow .cart-review .cart-list .cart-item .info .quantity div {
+    display: flex;
+  }
+  .buynow-container .buynow .cart-review .cart-list .cart-item .info .quantity div p {
+    text-align: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    font-weight: 500;
+    color: white;
+  }
+  .buynow-container .buynow .cart-review .cart-list .cart-item .info .quantity div p:nth-child(1),
+  .buynow-container .buynow .cart-review .cart-list .cart-item .info .quantity div p:nth-child(3) {
+    padding: 10px 15px;
+    text-align: center;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+  }
+  .buynow-container .buynow .cart-review .cart-list .cart-item .info .quantity div p:nth-child(3) {
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+  }
+  .buynow-container .buynow .cart-review .cart-list .cart-item .info .quantity div p:nth-child(2) {
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 30px;
+  }
+  .buynow-container .buynow .cart-review .cart-list .cart-item .info .quantity span {
+    font-size: 1.2rem;
+    color: white;
+    font-family: "Roboto Mono", monospace;
+  }
+  .buynow-container .buynow .cart-review .cart-summary {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+  }
+  .buynow-container .buynow .cart-review .cart-summary .summary-item {
+    display: flex;
+    justify-content: space-between;
+  }
+  .buynow-container .buynow .cart-review .cart-summary .summary-item p {
+    font-size: 0.9rem;
+    font-family: "Roboto Mono", monospace;
+    color: white;
+    font-weight: 300;
+  }
+  .buynow-container .buynow .cart-review .cart-summary .summary-total {
+    display: flex;
+    justify-content: space-between;
+  }
+  .buynow-container .buynow .cart-review .cart-summary .summary-total strong {
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+    font-family: "Roboto Mono", monospace;
+  }
+  .buynow-container .buynow .cart-review a {
+    margin-top: 40px;
+    text-align: center;
+    padding: 12px 0;
+    background: #BCAB6F;
+    color: black;
+    font-weight: 700;
+    font-family: "Roboto Mono", monospace;
+    border-radius: 5px;
+  }
+}/*# sourceMappingURL=buynow.css.map */

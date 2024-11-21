@@ -1,0 +1,182 @@
+@import "../../global//global.scss";
+
+@media only screen and (max-width: 1537px) {
+  .user-setting-container {
+    width: 100vw;
+    max-height: 100vh;
+    position: relative;
+    display: flex;
+    overflow-y: hidden;
+
+    .user-setting {
+      width: calc(100% - 220px);
+      height: 100vh;
+      max-height: 100vh;
+      overflow-y: auto;
+      .error-page {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .p {
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: rgba(0, 0, 0, 0.7);
+        }
+      }
+
+      .loading {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .setting-header {
+        padding: 25px 40px;
+
+        strong {
+          font-size: 1.1rem;
+          font-weight: 700;
+        }
+      }
+
+      .profile-form {
+        padding: 10px 40px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        .header {
+          margin-top: 15px;
+          display: flex;
+          flex-direction: column;
+          row-gap: 5px;
+          margin-bottom: 20px;
+
+          strong {
+            font-size: 1.1rem;
+          }
+
+          p {
+            font-size: 0.8rem;
+            color: rgba(0, 0, 0, 0.7);
+          }
+        }
+
+        .item {
+          display: flex;
+          flex-direction: column;
+          row-gap: 10px;
+
+          label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.7);
+          }
+
+          input {
+            color: rgba(0, 0, 0, 0.8);
+            padding: 10px 25px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+          }
+        }
+
+        button {
+          margin-top: 20px;
+          width: 20%;
+          // align-self: end;
+          padding: 10px 40px;
+          background: black;
+          color: white;
+          border-radius: 15px;
+          cursor: pointer;
+          font-weight: 600;
+        }
+      }
+
+      .security-form {
+        margin-bottom: 50px;
+        padding: 10px 40px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        .header {
+          margin-top: 15px;
+          margin-bottom: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          div {
+            display: flex;
+            flex-direction: column;
+            row-gap: 5px;
+
+            strong {
+              font-size: 1.1rem;
+            }
+
+            p {
+              font-size: 0.8rem;
+              color: rgba(0, 0, 0, 0.7);
+            }
+          }
+
+          #enable {
+            padding: 8px 20px !important;
+            background: red !important;
+            font-size: 0.75rem !important;
+            border-radius: 15px !important;
+            color: white !important;
+            cursor: pointer !important;
+          }
+
+          #disable {
+            padding: 8px 20px !important;
+            background: black !important;
+            font-size: 0.75rem !important;
+            border-radius: 15px !important;
+            color: white !important;
+            cursor: pointer !important;
+          }
+        }
+
+        .item {
+          display: flex;
+          flex-direction: column;
+          row-gap: 10px;
+
+          label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.7);
+          }
+
+          input {
+            color: rgba(0, 0, 0, 0.8);
+            padding: 10px 25px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+          }
+        }
+
+        #submit {
+          margin-top: 20px;
+          width: 20%;
+          // align-self: end;
+          padding: 10px 40px;
+          background: black;
+          color: white;
+          border-radius: 15px;
+          cursor: pointer;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

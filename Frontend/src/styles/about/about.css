@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+select,
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 1537px) {
+  .about-container {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #131313;
+  }
+  .about-container .about {
+    margin-top: 88px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .about-container .about .about-title {
+    width: 100%;
+    padding: 80px 20px;
+    background: #131313;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 20px;
+  }
+  .about-container .about .about-title strong {
+    color: white;
+    font-size: 1.5rem;
+    font-family: "Roboto Mono", monospace;
+    line-height: 1.4;
+    width: 50%;
+    margin-left: 30px;
+  }
+  .about-container .about .about-title p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 100px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-family: "Roboto Mono", monospace;
+    line-height: 1.6;
+    width: 50%;
+  }
+  .about-container .about .banner {
+    display: flex;
+    width: 100%;
+    height: 700px;
+    background-color: #131313;
+  }
+  .about-container .about .banner img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .about-container .about .about-header {
+    margin-top: 50px;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    margin-top: 100px;
+    height: 100%;
+    background-color: #131313;
+  }
+  .about-container .about .about-header strong {
+    font-size: 2rem;
+    font-family: "Roboto Mono", monospace;
+    color: white;
+  }
+  .about-container .about .about-header p {
+    margin-top: 20px;
+    font-size: 1rem;
+    font-family: "Roboto Mono", monospace;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}/*# sourceMappingURL=about.css.map */

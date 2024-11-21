@@ -1,0 +1,52 @@
+@import "../global/global.scss";
+
+@media only screen and (max-width: 1537px) {
+    .payment-fail-container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        background: $main-color;
+        justify-content: center;
+
+        .payment-fail {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 15px;
+
+            i {
+                color: #d14040;
+                font-size: 50px;
+                padding: 15px;
+                border-radius: 50%;
+                background: #3c2828;
+            }
+
+            strong {
+                margin-top: 10px;
+                font-family: $main-font;
+                font-size: 1.3rem;
+                color: white;
+            }
+
+            p {
+                font-size: 0.9rem;
+                font-family: $main-font;
+                color: $fade-white;
+            }
+
+            a {
+                margin-top: 20px;
+                padding: 12px 40px;
+                background: #d14040;
+                color: black;
+                font-weight: 800;
+                border-radius: 10px;
+                font-family: $main-font;
+                cursor: pointer;
+            }
+        }
+    }
+}

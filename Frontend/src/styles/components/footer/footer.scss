@@ -1,0 +1,57 @@
+@import "../../global/global.scss";
+$fade-white: rgba(255, 255, 255, .7);
+
+.footer-container {
+    width: 100%;
+    background: $main-color;
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+        }
+
+        .footer-item {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+
+            strong {
+                margin-bottom: 5px;
+                font-size: 1rem;
+                color: $fade-white;
+            }
+
+            a {
+                font-size: 0.9rem;
+                color: $fade-white;
+                text-decoration: underline;
+            }
+
+            p {
+                font-size: 0.9rem;
+                color: $fade-white;
+            }
+
+            div {
+                display: flex;
+                justify-content: space-between;
+
+                i {
+                    padding: 12px;
+                    border: 1px solid rgba(255, 255, 255, .1);
+                    color: $fade-white;
+                    font-size: 20px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}

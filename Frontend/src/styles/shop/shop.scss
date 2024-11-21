@@ -1,0 +1,151 @@
+@import "../global/global.scss";
+
+@media only screen and (max-width: 1537px) {
+    .shop-container {
+        position: relative;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+
+        .shop {
+            margin-top: 88px;
+            display: flex;
+            flex-direction: column;
+
+            .shop-header {
+                position: relative;
+                width: 100%;
+                padding: 80px 0;
+                background: $main-color;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                row-gap: 10px;
+                border-bottom: 1px solid rgba(255, 255, 255, .2);
+
+                strong {
+                    color: white;
+                    font-size: 30px;
+                    font-family: $main-font;
+                }
+
+                p {
+                    color: $fade-white;
+                    font-size: 0.85rem;
+                    font-weight: 400;
+                    font-family: $main-font;
+                }
+            }
+
+            .shop-main {
+                width: 100%;
+                background: $main-color;
+                display: flex;
+                flex-direction: column;
+
+                .shop-main-header {
+                    border-bottom: 1px solid rgba(255, 255, 255, .2);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    strong {
+                        padding: 0 40px;
+                        font-size: 1.1rem;
+                        color: white;
+                        font-family: $main-font;
+                    }
+
+                    .header-filter {
+                        height: 100%;
+                        // padding: 15px 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        p,
+                        i,
+                        select {
+                            height: 60px;
+                            border-left: 1px solid rgba(255, 255, 255, .2);
+                            color: $fade-white;
+                            font-family: $main-font;
+                        }
+
+                        i {
+                            padding: 20px 40px;
+                            font-size: 24px;
+                            cursor: pointer;
+                            transition: .4s;
+                        }
+
+                        i:hover {
+                            background: rgba(255, 255, 255, .1);
+                        }
+
+                        p {
+                            padding: 20px 40px;
+                            font-size: 0.85rem;
+                            font-weight: 400;
+                        }
+
+                        select {
+                            padding: 20px 60px;
+
+                            option {
+                                font-family: $main-font;
+                            }
+                        }
+                    }
+                }
+
+                .shop-main-list {
+                    width: 100%;
+                    // height: 2100px;
+                    display: flex;
+                    // border-bottom: 1px solid rgba(255, 255, 255, .2);
+                }
+
+                .end-product {
+                    padding: 100px 0 50px 0;
+                    background: $main-color;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    p {
+                        font-family: $main-font;
+                        color: #ffffff80;
+                        font-size: 1.1rem;
+                    }
+                }
+
+                .infinity-scroll {
+                    padding: 100px 0 50px 0;
+
+                    background: $main-color;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    strong {
+                        cursor: pointer;
+                        width: 250px;
+                        text-align: center;
+                        padding: 10px 0;
+                        border: 1px solid rgba(255, 255, 255, .2);
+                        color: rgba(255, 255, 255, .5);
+                        font-weight: 500;
+                        font-size: 0.9rem;
+                        transition: .4s;
+                    }
+
+                    strong:hover {
+                        background: rgba(255, 255, 255, .1);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+select,
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 1537px) {
+  .account-list-table {
+    padding: 15px 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .account-list-table thead tr {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .account-list-table thead tr th {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .account-list-table thead tr th:nth-child(1) {
+    text-align: start;
+    padding-left: 10px;
+  }
+  .account-list-table thead tr th:nth-child(2) {
+    grid-column: 2/span 3;
+    text-align: start;
+  }
+  .account-list-table thead tr th:nth-child(3) {
+    grid-column: 5/span 2;
+    text-align: start;
+  }
+  .account-list-table thead tr th:nth-child(4) {
+    grid-column: 7/span 4;
+    text-align: start;
+  }
+  .account-list-table thead tr th:nth-child(5) {
+    text-align: start;
+  }
+  .account-list-table thead tr th:nth-child(6) {
+    text-align: start;
+  }
+  .account-list-table tbody .error-page {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .account-list-table tbody .error-page .p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .account-list-table tbody .loading {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .account-list-table tbody tr {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 14px 0;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .account-list-table tbody tr td {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .account-list-table tbody tr td:nth-child(1) {
+    text-align: start;
+    padding-left: 15px;
+  }
+  .account-list-table tbody tr td:nth-child(2) {
+    grid-column: 2/span 3;
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  .account-list-table tbody tr td:nth-child(2) i {
+    font-size: 24px;
+  }
+  .account-list-table tbody tr td:nth-child(2) div {
+    display: flex;
+    flex-direction: column;
+  }
+  .account-list-table tbody tr td:nth-child(2) div strong {
+    font-size: 0.8rem;
+  }
+  .account-list-table tbody tr td:nth-child(2) div p {
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .account-list-table tbody tr td:nth-child(3) {
+    grid-column: 5/span 2;
+  }
+  .account-list-table tbody tr td:nth-child(4) {
+    grid-column: 7/span 4;
+  }
+  .account-list-table tbody tr td:nth-child(6) {
+    display: flex;
+  }
+  .account-list-table tbody tr td:nth-child(6) i {
+    margin-left: 8px;
+    padding: 7px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  .account-list-table tbody tr td:nth-child(6) i:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+}/*# sourceMappingURL=account.css.map */

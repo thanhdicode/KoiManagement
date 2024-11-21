@@ -1,0 +1,107 @@
+@import "../../global/global.scss";
+
+@media only screen and (max-width: 1537px) {
+    .admin-account-container {
+        width: 100vw;
+        max-height: 100vh;
+        position: relative;
+        display: flex;
+        overflow-y: hidden;
+
+        .admin-account {
+            width: calc(100% - 220px);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+
+            .admin-account-header {
+                padding: 25px 40px;
+
+                strong {
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                }
+            }
+
+            .admin-account-utils {
+                display: flex;
+                padding: 20px 40px;
+                // justify-content: space-between;
+                column-gap: 30px;
+                justify-content: end;
+
+                .search-account {
+                    display: flex;
+                    padding: 5px 10px;
+                    align-items: center;
+                    border: 1px solid rgba(0, 0, 0, .2);
+                    column-gap: 10px;
+                    border-radius: 10px;
+
+                    i {
+                        font-size: 0.85rem;
+                    }
+
+                    ::placeholder {
+                        font-size: 0.7rem;
+                    }
+
+                    input {
+                        width: 170px;
+                        font-size: 0.7rem;
+                        color: $fade-black;
+                    }
+                }
+
+                .filter {
+                    display: flex;
+                    align-items: center;
+                    background: rgba(0, 0, 0, .1);
+                    border-radius: 10px;
+                    position: relative;
+
+                    select {
+                        font-size: 0.7rem;
+                        width: 100%;
+                        padding: 5px 15px;
+                        color: black;
+
+                        option {
+                            background: white;
+                            color: black;
+                        }
+                    }
+
+                    i {
+                        left: 82%;
+                        font-weight: 100;
+                        font-size: 18px;
+                        position: absolute;
+                        z-index: -1;
+                    }
+                }
+
+                .add {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 5px 20px;
+                    column-gap: 5px;
+                    background: #4B87E0;
+                    border-radius: 10px;
+                    cursor: pointer;
+
+                    i {
+                        color: white;
+                        font-size: 18px;
+                    }
+
+                    p {
+                        color: white;
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+        }
+    }
+}

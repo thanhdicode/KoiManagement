@@ -1,0 +1,89 @@
+@import "../../global/global.scss";
+
+@media only screen and (max-width: 1537px) {
+    .myorder-list {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid rgba(0, 0, 0, .2);
+        overflow-y: auto;
+
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 500px;
+        }
+
+        .empty {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 500px;
+
+            p {
+                font-weight: 600;
+                font-size: 1.1rem;
+                color: $fade-black;
+            }
+        }
+
+        .server-error {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 500px;
+
+            p {
+                font-weight: 600;
+                font-size: 1.1rem;
+                color: $fade-black;
+            }
+        }
+
+        a {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 40px;
+            border-bottom: 1px solid rgba(0, 0, 0, .2);
+            cursor: pointer;
+            justify-content: space-between;
+            row-gap: 5px;
+            transition: .4s;
+
+            div {
+                display: flex;
+                column-gap: 30px;
+                align-items: center;
+
+                strong {
+                    color: black;
+                    font-size: 1rem;
+                }
+
+                p {
+                    font-size: 0.7rem;
+                }
+            }
+
+            p {
+                font-size: 0.9rem;
+                color: black;
+            }
+
+            span {
+                font-weight: 600;
+            }
+
+            .pending {
+                color: rgb(213, 213, 15);
+            }
+        }
+
+        a:hover {
+            background: rgba(0, 0, 0, 0.049);
+        }
+    }
+}

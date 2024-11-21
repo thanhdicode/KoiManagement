@@ -1,0 +1,255 @@
+@import "../global/global.scss";
+
+@media only screen and (max-width: 1537px) {
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .buynow-container {
+        position: relative;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        overflow-y: hidden;
+
+        .buynow {
+            display: flex;
+            height: calc(100vh - 100px);
+            background: $main-color;
+            padding: 0 80px;
+
+            .buynow-main {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                padding-top: 60px;
+                padding-bottom: 60px;
+                padding-right: 80px;
+                border-right: 1px solid rgba(255, 255, 255, .2);
+
+                .buynow-main-header {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 40px;
+                    align-items: center;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        column-gap: 10px;
+
+                        i {
+                            font-size: 20px;
+                            color: $fade-white;
+                        }
+
+                        p {
+                            font-size: 0.9rem;
+                            color: $fade-white;
+                            font-weight: 400;
+                        }
+                    }
+
+                    h2 {
+                        font-family: $main-font;
+                        color: white;
+                        font-size: 26px;
+                    }
+                }
+
+                .buynow-form {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 25px;
+
+                    .input-item {
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 15px;
+
+                        label {
+                            font-size: 0.8rem;
+                            color: white;
+                        }
+
+                        input {
+                            padding: 15px 20px;
+                            border: 1px solid rgba(255, 255, 255, .2);
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+
+            .cart-review {
+                width: 50%;
+                padding-top: 60px;
+                padding-bottom: 60px;
+                padding-left: 80px;
+                display: flex;
+                flex-direction: column;
+                overflow-y: auto;
+
+                .loading {
+                    width: 100%;
+                    height: 100vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .cart-review-header {
+                    margin-bottom: 40px;
+
+                    h2 {
+                        font-family: $main-font;
+                        color: white;
+                        font-size: 26px;
+                    }
+                }
+
+                .cart-list {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 50px;
+                    padding-bottom: 20px;
+                    // border-bottom: 1px solid rgba(255, 255, 255, .2);
+
+                    .cart-item {
+                        width: 100%;
+                        display: flex;
+                        height: 170px;
+                        column-gap: 50px;
+                        justify-content: space-between;
+                        padding-bottom: 40px;
+                        border-bottom: 1px solid rgba(255, 255, 255, .2);
+
+                        img {
+                            width: 120px;
+                            height: 100%;
+                            object-fit: cover;
+                            border: 1px solid rgba(255, 255, 255, .2);
+                            border-radius: 15px;
+                        }
+
+                        .info {
+                            width: calc(100% - 170px);
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+
+                            div {
+                                display: flex;
+                                justify-content: space-between;
+
+                                strong {
+                                    font-weight: 400;
+                                    color: white;
+                                    font-family: $main-font;
+                                }
+
+                                small {
+                                    font-size: 0.8rem;
+                                    color: $fade-white;
+                                }
+
+                            }
+
+                            p {
+                                padding-bottom: 30px;
+                                font-size: 0.8rem;
+                                color: $fade-white;
+                            }
+
+                            .quantity {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+
+                                div {
+                                    display: flex;
+
+                                    p {
+                                        text-align: center;
+                                        border-top: 2px solid rgba(255, 255, 255, 0.2);
+                                        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+                                        font-weight: 500;
+                                        color: white;
+                                    }
+
+                                    p:nth-child(1),
+                                    p:nth-child(3) {
+                                        padding: 10px 15px;
+                                        text-align: center;
+                                        border-left: 2px solid rgba(255, 255, 255, 0.2);
+                                        cursor: pointer;
+                                    }
+
+                                    p:nth-child(3) {
+                                        border-right: 2px solid rgba(255, 255, 255, 0.2);
+                                    }
+
+                                    p:nth-child(2) {
+                                        border-left: 2px solid rgba(255, 255, 255, 0.2);
+                                        padding: 10px 30px;
+                                    }
+                                }
+
+                                span {
+                                    font-size: 1.2rem;
+                                    color: white;
+                                    font-family: $main-font;
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+                .cart-summary {
+                    margin-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 35px;
+
+                    .summary-item {
+                        display: flex;
+                        justify-content: space-between;
+
+                        p {
+                            font-size: 0.9rem;
+                            // letter-spacing: 1px;
+                            font-family: $main-font;
+                            color: white;
+                            font-weight: 300;
+                        }
+                    }
+
+                    .summary-total {
+                        display: flex;
+                        justify-content: space-between;
+
+                        strong {
+                            // letter-spacing: 1px;
+                            font-size: 1rem;
+                            color: white;
+                            font-weight: 600;
+                            font-family: $main-font;
+                        }
+                    }
+                }
+
+                a {
+                    margin-top: 40px;
+                    text-align: center;
+                    padding: 12px 0;
+                    background: $second-color;
+                    color: black;
+                    font-weight: 700;
+                    font-family: $main-font;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
